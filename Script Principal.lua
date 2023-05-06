@@ -1,4 +1,4 @@
-local Evento = script.Parent:FindFirstChildOfClass("RemoteEvent") or script.Parent:WaitForChild("Camara")
+local Evento = game:GetService("ReplicatedStorage").EventosRemotos.player.Camara
 
 Tool = script.Parent
 Handle = Tool:WaitForChild("Handle")
@@ -110,7 +110,7 @@ function sonido_estocada(Humanoid)
 			animacion_I.Value = "sonido_estocada"
 			animacion_I.Parent = Tool
 		elseif Humanoid.RigType == Enum.HumanoidRigType.R15 then
-			Evento:FireAllClients()
+			Evento:FireAllClients("Estocada")
 			local animar = Humanoid:LoadAnimation(Tool.R15Lunge); animar.Looped = false; animar:Play()
 		end
 	end	
@@ -150,6 +150,16 @@ end
 
 function equipada()
 	Character = Tool.Parent
+	
+	if Character:FindFirstChildOfClass("StringValue") then
+		if Character:FindFirstChildOfClass("StringValue").Value == "MatrizaNebet" then
+			--
+		elseif Character:FindFirstChildOfClass("StringValue").Value == "MatrizaEriz" then
+			Tool:Remove()
+			Players:GetPlayerFromCharacter(Character):FindFirstChild(Tool.Name):Remove()
+		end
+	end
+	
 	Player = Players:GetPlayerFromCharacter(Character)
 	Humanoid = Character:FindFirstChildOfClass("Humanoid")
 	Torso = Character:FindFirstChild("Torso") or Character:FindFirstChild("HumanoidRootPart")
@@ -175,20 +185,3 @@ Tool.Equipped:Connect(equipada)
 Tool.Unequipped:Connect(desequipada)
 
 Coneccion = Handle.Touched:Connect(accion)
-
---[[--------------------------------------------------------------------------.
-||Es| |F1 |F2 |F3 |F4 |F5 | |F6 |F7 |F8 |F9 |F10|                  C= MATRIX  |
-||__| |___|___|___|___|___| |___|___|___|___|___|                             |
-| _____________________________________________     ________    ___________   |
-||~  |! |" |§ |$ |% |& |/ |( |) |= |? |` || |<-|   |Del|Help|  |{ |} |/ |* |  |
-||`__|1_|2_|3_|4_|5_|6_|7_|8_|9_|0_|ß_|´_|\_|__|   |___|____|  |[ |]_|__|__|  |
-||<-  |Q |W |E |R |T |Z |U |I |O |P |Ü |* |   ||               |7 |8 |9 |- |  |
-||->__|__|__|__|__|__|__|__|__|__|__|__|+_|_  ||               |__|__|__|__|  |
-||Ctr|oC|A |S |D |F |G |H |J |K |L |Ö |Ä |^ |<'|               |4 |5 |6 |+ |  |
-||___|_L|__|__|__|__|__|__|__|__|__|__|__|#_|__|       __      |__|__|__|__|  |
-||^    |> |Y |X |C |V |B |N |M |; |: |_ |^     |      |/\|     |1 |2 |3 |E |  |
-||_____|<_|__|__|__|__|__|__|__|,_|._|-_|______|    __||_|__   |__|__|__|n |  |
-|   |Alt|A  |                       |A  |Alt|      |<-|| |->|  |0    |. |t |  |
-|   |___|___|_______________________|___|___|      |__|V_|__|  |_____|__|e_|  |
-|                                                                             |
-`-------------------------------------------------------------------------'--]]
