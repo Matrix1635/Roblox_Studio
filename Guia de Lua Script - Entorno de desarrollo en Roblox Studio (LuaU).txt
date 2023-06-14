@@ -1,0 +1,2861 @@
+                                                 LUA_BASICS =
+                                                
+
+	            {"Bienvenido a LUA BASICS, aquí aprenderás sobre el uso correcto del lenguaje",
+		            "Además, de como llevar a cabo las tareas que necesites para tu juego"} --Matrix1635
+--------------------------------------------------------------------------------------------------------
+
+NOTA = {
+	"En este archivo, aprenderás 2 lenguajes de programación, que son como hermanos:",
+--
+	--[[-- EL CREADOR DE LUA --]]--
+--
+	Roberto_Ierusalimschy = 'Es un informático brasileño, conocido por crear el lenguaje de programación "Lua"',
+	
+Curiosidad = '"Lua", significa: "Luna" en portugués. Prácticamente aprenderás un lenguaje espacial',
+--
+	--[[-- LENGUAJES --]]--
+--
+Lua = "Lenguaje de script ligero y flexible utilizado en una amplia gama de aplicaciones",
+--
+Luau = 'Luau es una evolución de Lua desarrollada específicamente para el entorno de Roblox, con características adicionales y optimizaciones para mejorar el rendimiento y la seguridad'
+--
+}
+
+Tabla_De_Contenidos = {
+	
+	Aprendizaje = {
+		
+	TEMAS(
+		
+	-Tema_1 == "CONOCER LAS VARIABLES", -- Crear "VARIABLES"
+
+	-Tema_2 == "CARÁCTERES DEL LENGUAJE",
+
+	-Tema_3 == "CARÁCTERES EN INGLÉS"
+	),
+	SISTEMAS_BASICOS(
+			
+	)},
+	Creditos = {
+		
+	Autora = "Matrix1635" or "DevMatrix1635",
+		
+		--[[-- FUENTES DE INFORMACIÒN: --]]--
+		
+	Informacion_Destacada_Obtenida_En = "https://developer.roblox.com/en-us/",
+		
+	Si_Requieres_Ayuda_Con_Algun_Modelo_O_Ascesorias__Visita = "devforum.roblox.com"
+		
+	--Gracias por leer mi modelo ♥
+	--Atte: Matrix1635 "La Señorita Del Sombrero"
+	}
+}
+--------------------------------------------------------------------------------------------------------
+
+--[[-- TEMAS --]]--
+
+Tema_1 = "CONOCER LAS VARIABLES" -- Crear VARIABLES
+
+Descripcion = {
+"¿Qué es una variable? Las variables son palabras o símbolos que dan significado a cualquier cosa que desees.",
+"Las variables no pueden contener espacios y siempre deben ser secuencias o conjuntos de caracteres, como 'MapaDelMundo', 'NombreDelJugador', 'Jugador_1'.",
+"Puedes crear una variable que represente un número, una cadena de texto, una ruta ['ruta de un objeto y/o instancia'], una tabla '{}', una operación matemática o valores booleanos como 'true' (verdadero) o 'false' .",
+"Para crear una variable que se pueda utilizar dentro de un script, debes declararla primero con el prefijo 'local', lo que indica que es una variable local disponible solo en el script en el que se declara."
+}
+
+EJEMPLOS()
+
+local Objeto1 = game.Workspace.Objeto1 -- Referenciamos un objeto
+
+local Tabla_De_Numeros = {1, 2, 3, 4, 5} -- Ejemplo de una tabla con números del 1 al 5
+
+local Valor_Booleano = false -- Un valor booleano, su valor es "false", más adelante aprenderás a usarlo
+
+local Nombre_Jugador = "Matrix1635" -- Una cadena de texto (en inglés, normalmente le decimos: "string")
+
+--[[ 1.1 --]] Variables_Globales = {
+"Las variables globales pueden ser utilizadas desde cualquier script o también pueden ser declaradas con la siguiente sintaxis:"
+}
+
+TablaValores = {1, false, "Matrix1635", Vector = {10, 0, 10}, script.Parent}
+
+Modelo = TablaValores[5]
+
+Partes_Armadura = Modelo:GetChildren()
+--
+
+--
+Tema_2 = "CARÁCTERES DEL LENGUAJE"
+
+Descriptcion = {
+"¿Qué caracteres se pueden usar en Lua para hacer un código más concreto y preciso?",
+"No es un diccionario completo, pero aquí tienes algunos símbolos que te serán útiles al programar."
+}
+
+EJEMPLOS()
+
+--[[ 2.1 --]] LLAVES = {
+"¿Cómo se usan las llaves? Podemos guardar 2 objetos en una sola variable usando llaves: {}.",
+"Es importante separar cada objeto con una coma para evitar errores.",
+'Las llaves, son "Tablas", y nos permite, guardar varios datos en ellas'	
+}
+
+EJEMPLOS()
+
+local Decals = {script.Decal1, script.Decal2} -- Guardamos dos objetos en una variable usando llaves
+local Partes = {game.Workspace.Part, game.Workspace.Part2} 
+
+--[[ 2.2 --]] CORCHETES = {
+"¿Qué son los 'corchetes' y cómo se usan? Si un objeto tiene espacios en su nombre, se puede acceder a él usando corchetes y comillas [''].",
+"Es importante usar comillas al referirse a los nombres, de lo contrario, se producirá un error.",
+"Veremos más ejemplos más adelante. Por ahora, recuerda que puedes escribir objetos así: game.Workspace['nombre del objeto']",
+'Los corchetes, son una manera de sintaxis, que nos permite hacer acepción a un valor dentro de una tabla o similar'	
+}
+
+EJEMPLOS()
+
+local Pelota = game:GetService("Workspace")["Pelota Objeto"] -- Referenciamos un objeto llamado: "Pelota Objeto"
+
+local Moneda = game.Workspace["Modeda Modelo 1"] -- Referenciamos un objeto llamado: "Moneda Modelo 1"
+
+local Tabla_Nombres = {'Juan', "Sahara", "Matrix1635", "David Baszucki"}
+
+local Mi_Nombre = Tabla_Nombres[3]
+
+--[[ 2.3 --]] USO_DE = {"=, ==, <, >, >=, <=, ~, ~=",
+'¿Qué significan: "=, ==, <, >, >=, <=, ~, ~=", y cómo se usan?:'
+}
+
+--[[ 2.3.1 --]] EL_IGUAL = {
+
+'Todos conocemos el igual; pero, ¿Cómo usarlo?: "=,',
+'El igual todos lo conocemos, es utilizado para asignar un valor a una variable y darle significado a las cosas.',
+'No creo que haga falta explicarlo mucho, todos los sabemos usar, pero aquí te doy ejemplos'	
+}
+
+EJEMPLOS()
+-- El igual va después del nombre de la variable:
+
+local Frame = {script.Parent.Frame}
+
+local Nombre = script.Name
+
+local Character = workspace.Character
+
+local Sombrero = Character["Sombrero de Vaquero"]
+
+local Valor = Modelo:FindFirstChildOfClass("IntValue").Value
+
+local ImageLabel = Frame:FindFirstChild("ImageLabel")
+
+local ColorDeFondo = ImageLabel.BackgroundColor3
+
+--[[ 2.3.1.1 --]] OPERACIONES_MATEMATICAS = {'Conocerás las operaciones matemáticas posibles en'.. Lua,
+'No es realmente complicado, te mostraré las operaciones que puedes realizar, y sus ejemplos'
+}
+
+-- Ejemplo de operaciones matemáticas en Lua
+
+-- Suma
+local suma = 5 + 3
+print("Suma:", suma)
+
+-- Resta
+local resta = 10 - 4
+print("Resta:", resta)
+
+-- Multiplicación
+local multiplicacion = 6 * 2
+print("Multiplicación:", multiplicacion)
+
+-- División
+local division = 20 / 5
+print("División:", division)
+
+-- Módulo (resto de la división)
+local modulo = 17 % 3
+print("Módulo:", modulo)
+
+-- Raíz cuadrada
+local raizCuadrada = math.sqrt(25)
+print("Raíz cuadrada:", raizCuadrada)
+
+-- Potencia
+local potencia = math.pow(2, 3)
+print("Potencia:", potencia)
+
+-- Valor absoluto
+local absoluto = math.abs(-10)
+print("Valor absoluto:", absoluto)
+
+-- Redondeo
+local redondeo = math.floor(3.7)
+print("Redondeo hacia abajo:", redondeo)
+
+-- Funciones trigonométricas
+local anguloRadianes = math.rad(45)
+local seno = math.sin(anguloRadianes)
+local coseno = math.cos(anguloRadianes)
+local tangente = math.tan(anguloRadianes)
+
+print("Seno de 45 grados:", seno)
+print("Coseno de 45 grados:", coseno)
+print("Tangente de 45 grados:", tangente)
+
+-- Generación de número aleatorio entre 0 y 1
+local aleatorio = math.random()
+print("Número aleatorio:", aleatorio)
+
+
+--[[ 2.3.2 --]] EL_DOBLE_IGUAL = {
+
+'¿Cómo, y dónde empleamos un doble igual?: "El doble igual puede ser usado raras veces en variables,',
+'En Lua, el operador de comparación doble igual ("==") se utiliza para realizar una comparación de igualdad entre dos valores.',
+	
+'A diferencia del operador de asignación simple ("="), que se utiliza para asignar valores a variables,',
+'el operador de igualdad se utiliza para evaluar si dos valores son iguales y devuelve un valor booleano (verdadero o falso) como resultado'
+}
+
+EJEMPLOS()
+
+local x = 10 -- Una variable llamada: "X" que vale: "10"
+local y = 5  -- Una variable llamada: "Y" que vale: "5"
+
+if x == y then -- Comparamos si X es igual a Y, ya sabemos que no, así que, sucederá lo que está debajo del "else"
+	print("x es igual a y")
+else
+	print("x no es igual a y")
+end
+
+--[[ 2.3.3 --]] OPERADORES__MENOR_QUE__MAYOR_QUE = {
+'Los símbolos "<" y ">" se conocen como operadores de comparación "menor que" y "mayor que", respectivamente.',
+'En Lua y Luau, se utilizan para comparar dos valores y devolver un resultado booleano (verdadero o falso) basado en la relación de orden entre ellos'
+}
+
+EJEMPLOS()
+
+--------------------------------------------
+local num1 = 10 -- Una variable que significa un número
+local num2 = 5 -- Otra variable numérica
+
+if num1 < num2 then -- Hacemos una comparación con "if". Si la primera variable es menos que la segunda, pasará lo de abajo
+	print("num1 es menor que num2")
+elseif num1 > num2 then -- En caso de que, no sea menor (else), y al contrario, sea mayor (elseif), sucederá lo de abajo:
+	print("num1 es mayor que num2")
+else -- Si son iguales, es decir, si no son uno mayor que el otro, o, uno menor que el otro, sucederá lo de abajo:
+	print("num1 es igual a num2")
+end
+--------------------------------------------
+local player = game.Players.LocalPlayer -- Una variable que representa un jugador
+local enemigo = game.Workspace.Enemigo -- Representamos un enemigo
+
+if player.Character.Humanoid.Health > enemigo.Humanoid.Health then -- Si el jugador tiene más vid que el enemigo, sucederá lo de abajo:
+	print("¡El jugador tiene más vida que el enemigo!")
+else -- Si no tiene más vida que el enemigo (else), sucederá lo de abajo:
+	print("El enemigo tiene más vida que el jugador o ambos tienen la misma cantidad de vida.")
+end
+--------------------------------------------
+local Pieza = game.Workspace:FindFirstChildOfClass("Part") -- Buscamos una pieza en el Workspace (espacio de trabajo)
+
+if Pieza.BrickColor == ColorSequence.new(Color3.fromRGB()) then -- Si su color es el que decimos aquí, pasará lo de abajo:
+	print("El color es: "..tostring(Pieza.BrickColor))
+end
+--------------------------------------------
+--
+
+--
+Tema_3 = "CARÁCTERES EN INGLÉS"
+
+Descripcion = {
+'¿Cómo puedo implementar caracteres en inglés para programar?: "No es complicado, usaremos algunos caracteres para poder',
+'referenciar o mejorar nuestro código; mucho cuidado de abusar demasiado de algunos de estos"'
+}
+
+EJEMPLOS()
+
+--[[ 3.1 --]] USO_DE = {'"or":',
+'¿Qué es "or"?: "or" viene a significar en español "o", "o si no", "o también", etc. Lo usamos para llamar algo de varias maneras distintas"',
+'El operador "or" se utiliza principalmente en estructuras condicionales o expresiones booleanas para evaluar múltiples condiciones y determinar si alguna de ellas es verdadera'	
+}
+
+EJEMPLOS()
+--EJEMPLO CON INSTANCIAS--
+
+--Buscamos, una instancia de "imageLabel"
+local ImagenLabel = script.Parent.ImagenLabel or script.Parent:FindFirstChildOfClass("ImageLabel") or script.Parent["ImageLabel"]
+
+--Buscamos una carpeta (en Roblox Studio, las carpetas son lo mismo que: "Folder")
+local Carpeta = script.Parent.Folder or script.Parent["Folder"] or script.Parent:FindFirstChildOfClass("Folder")
+
+--Buscamos un modelo
+local Model = script.Parent:FindFirstChildOfClass("Model") or script.Parent["Modelo"]
+
+--EJEMPLO CON VALORES--
+
+-- Ejemplo 1
+local a = 5
+local b = 10
+local c = nil
+
+-- Devuelve el primer valor verdadero (a = 5)
+local result = a or b or c
+print(result) -- Salida: 5
+
+-- Ejemplo 2
+local x = false
+local y = false
+local z = "hola"
+
+-- Devuelve el primer valor verdadero (z = "hola")
+local result2 = x or y or z
+print(result2) -- Salida: hola
+
+
+--[[ 3.2 --]] USO_DE = {'"nil"',
+'¿Qué es, y cómo puedo usar "nil"?: "nil" viene a significar "nada" o nulo,',
+'Se utiliza, para referenciar algo que no existe, o detectar si algo es inexistente, o quizá esperar a que algo sea distinto de la "in-existencia"',	
+'puede ser usado de las siguientes formas":'
+}
+
+EJEMPLOS()
+
+jugador = nil
+
+if jugador == nil then
+jugador = "Jugador1"
+end
+
+local Jugador = game.Players.LocalPlayer repeat wait() until Jugador ~= nil --Se refiere a que: la variable significara el Jugador- Hasta que éste sea algo diferente a "nada", entonces, si el Jugador no aparece, se repetira hasta que deje de ser "nil" (nada)
+
+if Jugador == nil then
+	print("No hay Jugador")
+elseif Jugador ~= nil then
+	print(Jugador.Name)
+end
+
+--[[ 3.3 --]] USO_DE = {'if, else, elseif',
+'¿Qué son if, else, elseif y then, y cómo usarlos?: "if" se traduce como "si". Se utiliza para establecer condiciones, como "si pasa esto", "si ocurre esto", "si fuera esto", "si no es esto", etc.',
+'"else" se traduce como "si no". Se utiliza cuando la condición del "if" no se cumple, es decir, "si no es así", "si no existe", "si no sucede", "si no pasó", etc.',
+'"elseif" se traduce como "pero si". Se utiliza para agregar condiciones adicionales después de un "if" y antes de un "else". Por ejemplo, "pero si no es así", "pero si ocurre esto", "pero si cambió esto", "pero si se borró esto", etc.',
+'"then" se traduce como "entonces". Se utiliza para indicar qué sucede si se cumple la condición del "if", por ejemplo, "entonces sucede esto", "entonces pasa esto", "entonces cambia esto", "entonces aquello", etc."'
+}
+
+EJEMPLOS()
+
+--------------------------------------------
+local num = -5  -- Asigna el valor -5 a la variable 'num'
+
+if num > 0 then  -- Si 'num' es mayor que 0, ejecuta el bloque de código siguiente
+	print("El número es positivo")  -- Imprime el mensaje "El número es positivo"
+elseif num < 0 then  -- Si 'num' no es mayor que 0 y es menor que 0, ejecuta este bloque
+	print("El número es negativo")  -- Imprime el mensaje "El número es negativo"
+else  -- Si ninguna de las condiciones anteriores se cumple, ejecuta este bloque
+	print("El número es cero")  -- Imprime el mensaje "El número es cero"
+end  -- Termina el bloque condicional
+--------------------------------------------
+local Players = game:GetService("Players")
+
+Players.PlayerAdded:Connect(function(player) --hablaremos de "function" más tarde; pero esto sirve para ponerle un uso al juego cada que 'X' jugador se conecta al mismo
+
+	if player.Name == "Matrix1635" then --Aquí decimos: "Si el nombre del jugador es = "Matrix1635" entonces" y sucede lo de abajo
+	print("Se ha unido el creador") --Esto sucede luego de lo de arriba, simepre y cuando lo de arriba se cunpla, si se une un jugador llamado "Matrix1635" entonces sucede esto, sucede que imprime un mensaje en el Output con el código: "print()" dentro de los paréntesis se ponen comillas cuando es texto, y se pone lo que se quiere imprimir
+	end --Fin de if
+	
+end) --Fin de la function
+--------------------------------------------
+if script.Parent.TextLabel == nil then --Si no existe un "TextLabel, letrero de texto al español" en el papá del script, es decir, en donde se encuentra el script, puede ser un folder o un modelo, entonces sucede lo de abajo
+local TextLabel = Instance.new("TextLabel") --Creamos una variable que sea crear una nueva instancia de tipo "TextLabel", para eso usamos el código: "Instance.new()" y dentro de los paréntesis ponemos comillas y el tipo de instancia que queremos crear
+TextLabel.Name = "Texto" --Le ponemos un nombre a la instancia, lo llamaremos "Texto", casi todas las cosas en un juego de Roblox tiene la propiedad de nombre, por lo que para referirse al nombre de algo se pone ".Name" luego de lo que quieras referenciar, para cambiar un nombre etc
+TextLabel.Parent = script.Parent --Aquí le asignamos un padre, un papá o en palabras simples, el lugar donde estará, también usamos ".Parent" muy seguido con casi todo, sinifica basicamente en donde se coloca algo, o para referenciar a algo, si el script de este ejemplo está dentro de un "Model" o modelo, entonces el papá del script será el modelo, colocamos el "TextLabel" dentro de donde sea que estuviera el script del ejemplo
+
+elseif script.Parent.TextLabel ~= nil then --Aquí decimos: "Pero si sí existe un TextLabel dentro del papá del script, entonces" y sucede lo de abajo
+print("Si existe un TextLabel") --Imprimimos un mensaje en el Outpud diciendo: "Si existe un TextLabel"
+end --Fin del if
+---------------------------------------------
+if script.Parent.Name == "Model" then --Aquí decimos, si el nombre del padre del script es "Model" entonces sucede lo de abajo
+print("El nombre es correcto") --Imprimimos un mensaje en el Outpud diciendo: "El nombre es correcto"
+else --Aquí decimos, pero, junto con lo de aariba, del tipo: pero si el nombre del padre del script no es "Model" o simplemente, lo de arriba, es decir lo del if, no es correcto, o de abajo, curiosidad, else y elseif no son iguales, else no lleva then, y se usa para que suceda lo de abajo simepre y cuando lo del "if" no sea correcto, elseif puede ser para algo más que si solo lo del "if" de arriba no es correcto, puede cumplirse o no cumplirse algo adicional
+print("El nombre no es Model") --Imprimimos: "El nombre no es Model"
+end --Fin del if
+---------------------------------------------
+local num = 9  -- Asigna el valor 9 a la variable 'num'
+
+if num % 2 == 0 then  -- Si el resto de la división de 'num' entre 2 es igual a 0, ejecuta el siguiente bloque
+	print("El número es par")  -- Imprime el mensaje "El número es par"
+else  -- Si la condición anterior no se cumple, ejecuta este bloque
+	print("El número es impar")  -- Imprime el mensaje "El número es impar"
+end  -- Termina el bloque condicional
+---------------------------------------------
+
+--[[ 3.4 --]] Sintaxis_Y_Bucles = {'Aprenderemos sobre la sintaxis de los bucles de Lua, para que los puedas usar',	
+}
+
+--[[ 3.4.1 --]] USO_DE = {'Bucle "for"',
+'El bucle "for" se utiliza para repetir una serie de instrucciones un número específico de veces.',
+'Puedes definir el rango de iteración utilizando valores numéricos o un iterador que recorra una colección.',
+'Aquí tienes un ejemplo de cómo utilizar el bucle "for":'
+}
+
+EJEMPLOS()
+
+-- Bucle "for" utilizando valores numéricos
+for i = 1, 5 do
+	print("Iteración:", i)
+end
+
+-- Bucle "for" utilizando un iterador
+local miTabla = { "manzana", "banana", "cereza" }
+for indice, valor in ipairs(miTabla) do
+	print("Elemento", indice, ":", valor)
+end
+
+--[[ 3.4.2 --]] USO_DE = {'Bucle "while"',
+'El bucle "while" se utiliza cuando quieres repetir un bloque de código mientras se cumple una condición.',
+'El bloque de código se ejecutará siempre y cuando la condición sea verdadera.',
+'Aquí tienes un ejemplo de cómo utilizar el bucle "while":'
+}
+
+EJEMPLOS()
+
+local contador = 1
+while contador <= 5 do
+	print("Iteración:", contador)
+	contador = contador + 1
+end
+
+--[[ 3.4.3 --]] USO_DE = {'Bucle "repeat..until"',
+'El bucle "repeat...until" es similar al bucle "while", pero la condición se evalúa al final del bloque de código.',
+'Esto significa que el bloque de código se ejecutará al menos una vez y luego se repetirá hasta que la condición sea verdadera.',
+'Aquí tienes un ejemplo de cómo utilizar el bucle "repeat...until":'
+}
+
+EJEMPLOS()
+
+-- Ejemplo 1
+local contador = 1 -- Variable numérica
+repeat -- Iterador de repetición
+	print("Iteración:", contador) -- Esto de aquí, se repetirá hasta que se cumpla con lo de abajo
+	contador = contador + 1
+until contador > 5 -- Si se cumple: "contador es mayor que 5" se detiene el bucle
+
+-- Ejemplo 2
+local Players = game:GetService("Players")
+--Hacemos el bucle para un LocalScript
+local player = Players.LocalPlayer -- Variable de jugador
+
+repeat -- Iteramos el bucle
+	player = Players.LocalPlayer -- Repetimos el valor de la variable
+until player ~= nil -- Hasta que "player" sea diferente de la in-existencia o de "nil"
+
+--[[ 3.4.4 --]] Crear_Tus_Propias_Funciones = {'Aprenderás a crear tus propias funciones',
+'Puedes definir y utilizar funciones propias en Lua.',
+'Las funciones son bloques de código que se pueden llamar en diferentes partes de tu programa.',
+'Puedes definir funciones utilizando la palabra clave "function" y llamarlas utilizando su nombre seguido de paréntesis'
+}
+
+EJEMPLOS()
+
+-- Ejemplo 1
+
+-- Definir una función
+function saludar(nombre)
+	print("Hola, " .. nombre .. "!")
+end
+
+-- Llamar a la función
+saludar("Juan")
+
+NOTA = {'Hay varias maneras de llamar a una función, te mostraré la forma de llamarla con dos puntos'}
+
+-- Ejemplo 2
+
+-- Definición de la tabla
+local Tabla = {1, 2, 3, 4}
+
+-- Definición de la función ImprimirDatos en la tabla
+function Tabla:ImprimirDatos()
+	--[[Iterar sobre los pares clave-valor de la tabla utilizando pairs
+	El primer valor retornado (i) representa la clave y el segundo valor (v) representa el valor--]]
+	for i, v in pairs(self) do
+		-- Imprimir el valor actual de la tabla
+		print(v)
+	end
+end
+
+-- Llamar a la función ImprimirDatos en la tabla
+Tabla:ImprimirDatos()
+
+--Ejemplo 3
+local Tabla_Nombres_Numero = {"Matrix1635", "Sahara", "Algalemo", 7} -- Creamos una tabla con cadenas dentro
+
+-- Creamos una función única que no esté en Roblox
+function Tabla_Nombres_Numero:WaitForDataOfClass(clase)
+	repeat --Bucle de repeat
+		for _, dato in ipairs(self) do -- Bucle de for, "self" es la Tabla, realmente no era necesario escribirla, self representa la tabla
+			if type(dato) == clase then -- Condicional para saber si el dato que se intenta buscar existe
+				print("Se ha encontrado un dato de la clase:", clase)
+				return dato
+			end
+		end
+		-- Pausa la ejecución durante un corto período de tiempo antes de volver a intentarlo
+		wait(0.1)
+	until false
+end
+
+Tabla_Nombres_Numero:WaitForDataOfClass("number") -- Utilizamos la función, pasando que se busque un dato numérico
+
+--[[ 3.4.5 --]] MODULOS_Y_BIBLIOTECAS = {'Aprenderemos sobre los módulos y bibliotecas',
+'En Lua, los módulos y bibliotecas son mecanismos que permiten extender las capacidades del lenguaje',
+'y acceder a funciones y características adicionales proporcionadas por código externo',	
+'Un módulo es un archivo de código Lua que contiene un conjunto de funciones y variables relacionadas',
+'Una biblioteca, por otro lado, es un conjunto de módulos relacionados.',
+'Puede contener varios módulos agrupados para brindar una funcionalidad más completa y organizada'	
+}
+
+NOTA = {'Para cargar un módulo o biblioteca en Lua, se utiliza la función require().',
+'Esta función recibe como argumento el nombre del módulo o la ruta del archivo que contiene el módulo.',
+'Por ejemplo, si quieres cargar el módulo "io" para acceder a las funciones de lectura y escritura de archivos',
+'puedes hacerlo de la siguiente manera:'
+}
+
+EJEMPLOS()
+
+--[[-- MÓDULOS --]]--
+
+--Ejemplo 1
+
+--[[
+En este ejemplo, require("io") carga el módulo "io", que es parte de la biblioteca estándar de Lua
+y proporciona funciones para trabajar con archivos. Una vez cargado, puedes utilizar las funciones del módulo,
+como io.open() y archivo:read(), para realizar operaciones de lectura y escritura de archivos.
+--]]
+
+local io = require("io")
+
+-- Ahora puedes usar las funciones de lectura y escritura de archivos
+local archivo = io.open("archivo.txt", "r")
+local contenido = archivo:read("*a")
+archivo:close()
+
+--Ejemplo 2
+
+--[[
+En este ejemplo, se carga el módulo math utilizando require("math").
+El módulo math es parte de la biblioteca estándar de Lua y proporciona varias funciones matemáticas.
+Ni io, ni math, son necesario instalarlos cuando estamos en Roblox Studio, los tienes instalados por defecto
+--]]
+
+-- Cargando el módulo "math"
+local math = require("math")
+
+-- Utilizando las funciones del módulo "math"
+
+-- Obtener el seno de un ángulo en radianes
+local angulo = math.pi / 4
+local seno = math.sin(angulo)
+print("El seno de " .. angulo .. " radianes es: " .. seno)
+
+-- Generar un número aleatorio entre 1 y 10
+local numeroAleatorio = math.random(1, 10)
+print("Número aleatorio: " .. numeroAleatorio)
+
+-- Calcular la raíz cuadrada de un número
+local numero = 25
+local raizCuadrada = math.sqrt(numero)
+print("La raíz cuadrada de " .. numero .. " es: " .. raizCuadrada)
+
+--Ejemplo 3
+
+--[[
+En este ejemplo, cargaremos un ModuleScript (es una instancia de Roblox Studio, similar a Script y LocalScript)
+La instancia, debe ser "previamente creada" y saber en dónde se encuentra para buscarla
+--]]
+
+--Le hacemos una variable al ModuleScript antes de nada, utilizando "require()""
+local Modulo_Funciones = require(script.Parent.Parent:FindFirstChildOfClass("Folder")["Modulo Funciones"])
+
+--[[
+Si el modulo, contiene una función, la función deberá ser global y extendida, es decir, no puede contener
+variables locales y tampoco globales de la manera tradicional.
+
+Supongamos que contiene lo siguiente:
+
+"local module = {}
+
+function module.Imprimir(Dato)
+	print(Dato)
+end
+
+return module"
+
+Aquí, hay una variable de tabla local llamada module, además, una función que es parte de "module"
+la función puede ser usada tanto por Scripts como LocalScripts
+--]]
+
+Modulo_Funciones.Imprimir("¡Hola mundo!") -- Utilizamos la función del módulo
+
+--[[-- LIBRERÍAS --]]--
+
+--Ejemplo 1
+
+--[[
+Aquí tienes un ejemplo de cómo cargar y utilizar la librería lsqlite3 en Lua
+para trabajar con bases de datos SQLite:
+--]]
+
+-- Cargando la librería "lsqlite3"
+local sqlite3 = require("lsqlite3")
+
+-- Crear una conexión a la base de datos
+local db = sqlite3.open("database.db")
+
+-- Crear una tabla
+db:exec[[
+  CREATE TABLE IF NOT EXISTS usuarios (
+    id INTEGER PRIMARY KEY,
+    nombre TEXT,
+    edad INTEGER
+  )
+]]
+
+-- Insertar datos en la tabla
+local nombre = "Juan"
+local edad = 25
+db:exec(string.format("INSERT INTO usuarios (nombre, edad) VALUES ('%s', %d)", nombre, edad))
+
+-- Consultar datos de la tabla
+for row in db:nrows("SELECT * FROM usuarios") do
+	print("ID:", row.id)
+	print("Nombre:", row.nombre)
+	print("Edad:", row.edad)
+end
+
+-- Cerrar la conexión a la base de datos
+db:close()
+
+NOTA = {'En este ejemplo, se carga la librería lsqlite3 utilizando require("lsqlite3").',
+'Esta librería permite trabajar con bases de datos SQLite en Lua.'
+}
+
+--
+
+--
+--[[ 3.5 --]] Lenguaje_En_Roblox_Studio = "USO_DE_EVENTOS, APIS_BASICAS, SERVICIOS y TERMINOS"
+Descripcion = {
+"En esta sección aprenderás sobre los servicios, eventos, APIs y términos utilizados en Roblox Studio.",
+"Es importante tener conocimientos básicos de inglés, ya que gran parte de la documentación está en ese idioma.",
+"A continuación, te mostraremos los más utilizados y cómo usarlos en tus proyectos."
+}
+
+--[[ 3.5.1 --]] USO_DE = {'Uso de :FindFirstChild() y :FindFirstChildOfClass():',
+'La función :FindFirstChild() se utiliza para buscar una instancia específica dentro de otra.',
+'Por ejemplo, puedes buscar un "ImageLabel" dentro de un objeto utilizando:',
+'local ImageLabel = script.Parent:FindFirstChild("ImageLabel")',
+'Si no tienes una variable con el nombre que deseas buscar, puedes usar comillas:',
+'local ImageLabel = script.Parent:FindFirstChild("ImageLabel")',
+	
+'La función :FindFirstChildOfClass() se utiliza para buscar una instancia de una clase específica,',
+'incluso si no tiene el mismo nombre que su clase. Por ejemplo:',
+'local Humanoid = Character:FindFirstChildOfClass("Humanoid")',
+'Aquí estamos buscando una instancia de la clase "Humanoid" dentro del objeto "Character".'
+}
+
+EJEMPLOS()
+
+-- Ejemplo 1
+local ImageLabelName = 'ImageLabel'
+local ImageLabel = script.Parent:FindFirstChild(ImageLabelName) or script.Parent:FindFirstChildOfClass(ImageLabelName)
+
+--Ejemplo 2
+local Carpeta = "Folder"
+local Folder = script.Parent:FindFirstChildOfClass(Carpeta)
+
+--[[ 3.5.2 --]] USO_DE = { 'Uso de :WaitForChild():',
+	
+'La función :WaitForChild() se utiliza para esperar hasta que una instancia en particular aparezca.',
+'Es importante usarla con cuidado, ya que puede ralentizar la ejecución del código.',
+'Por ejemplo:',
+'local character = game:GetService("Workspace"):WaitForChild(Jugador.Name)',
+'Aquí estamos esperando a que la instancia del personaje del jugador aparezca en el Workspace.'
+}
+
+EJEMPLOS()
+
+local player = game.Players:FindFirstChild() -- Buscamos un jugador
+
+local character = game:GetService("Workspace"):WaitForChild(player.Name) -- Enfatizamos el personaje del jugador
+local Humanoid = character:WaitForChild("Humanoid") -- Buscamos la instancia de Humanoid en el personaje
+
+NOTA = {"Ten en cuenta, que tanto" .. ':FindFirstChild()' .. ':FindFirstChildOfClass()' .. ":WaitForChild()",
+	"son operadores exclusivos del lenguaje ".. Luau " (una variante de Lua, pero única de Roblox y para Roblox)"
+}
+
+--[[ 3.5.2 --]] USO_DE = {'funciones de '.. Lua("Funciones Naturales") .."y".. Luau("Únicas en Roblox"),
+'Hay funciones y operadores, tanto en '.. Lua 'como en '.. Luau ', y las veremos',
+	
+'Hay varias funciones y varios operadores, veremos los más interesantes:'
+}
+
+--[[ 3.5.3 --]] USO_DE = {"Veremos operadores y funciones de".. Lua "y".. Luau 'a continuación los clasifico:',
+	--
+	Operadores_De_Lua = {
+		--
+		Operadores_Unicos = {print(), loadstring(), tick(), pcall(), pairs(), assert()},
+
+		Operadores_De_Type = {
+			Funciones = {type(), typeof()},
+			Cambiar_Clase_De_Dato = {tostring(), tonumber()}},
+
+		Operadores_De_Raw = {rawget(), rawlen(), rawset(), rawequal()},
+
+		Operadores_De_Get = {getfenv(), getmetatable()},
+
+		Operadores_De_String = {string.unpack(), string.sub(), string.len(), string.rep(), string.byte(),
+			string.char(), string.find(), string.gsub(), string.pack(), string.lower(), string.match(),
+			string.split(), string.upper(), string.format(), string.gmatch(), string.reverse(), string.packsize()},
+
+		Operadores_De_Os = {os.date(), os.time(), os.clock(), os.difftime()},
+
+		Operadores_De_Coroutine = {coroutine.wrap(), coroutine.close(), coroutine.yield, coroutine.create(),
+			coroutine.resume(), coroutine.status(), coroutine.running(), coroutine.isyieldable()},
+
+		Operadores_De_Math = {math.rad(), math.pi, math.abs(), math.cos(), math.deg(), math.exp(), math.log(),
+			math.max(), math.min(), math.pow(), math.sin(), math.tan(), math.acos(), math.asin(), math.atan(),
+			math.ceil(), math.cosh(), math.fmod(), math.huge, math.modf(), math.sign(), math.sinh(), math.sqrt(),
+			math.tanh(), math.atan2(), math.clamp(), math.floor(), math.frexp(), math.ldexp(), math.log10(), math.noise(),
+			math.round(), math.random(), math.randomseed()},
+		Operadores_Para_Tablas = {
+			Operador_Table = {table.unpack(), table.find(), table.maxn(), table.pack(), table.clear(), table.create(),
+				table.move(), table.sort(), table.clone(), table.concat(), table.freeze(), table.insert(),
+				table.remove(), table.isfrozen()},
+			Operadores_Adicionales = {setmetatable(), getmetatable()},
+			Operadores_De_Shared_Table = {SharedTable.new(), SharedTable.clone(), SharedTable.cloneAndFreeze(),
+				SharedTable.clear(), SharedTable.clear(), SharedTable.size(), SharedTable.update(),
+				SharedTable.isFrozen(), SharedTable.increment()}},
+		Operador_Debug = {debug.info(), debug.traceback(), debug.getmemorycategory(), debug.setmemorycategory(),
+			debug.profileend(), debug.profilebegin(), debug.resetmemorycategory()}},
+	--
+	Operadores_De_Luau = {
+		Operadores_Unicos = {Instance.new(), Rect.new(), time(), Faces.new(),
+			newproxy(), OverlapParams.new(), CatalogSearchParams.new(), DockWidgetPluginGuiInfo.new(), error(),
+			NumberRange.new(), PathWaypoint.new(), PhysicalProperties.new(), Axes.new(), select()},
+		Operadores_De_Tarea = {task.wait(), task.spawn(), task.defer(), task.delay(), task.cancel(), task.synchronize(), task.desynchronize()},
+		Operadores_De_Vectores = {
+			Operadores_CurveyKey = {RotationCurveKey.new(), FloatCurveKey.new()},
+			Vectores_De_Dos_Dimensiones = {
+				Operadores_Unicos_Dos_Dimensiones = {Vector2int16.new()},
+				Operador_Udim = {UDim2.new(), UDim2.fromScale(), UDim2.fromOffset()},
+				Operadores_Generales = {Vector2.new()},
+				Operadores_De_One = {Vector2.one.X, Vector2.one.Y, Vector2.one.Magnitude, Vector2.one.Unit},
+				Operadores_De_Zero = {Vector2.zero.X, Vector2.zero.Y, Vector2.xAxis, Vector2.zero.Magnitude},
+				Operador_De_xAxix = {Vector2.xAxis.X, Vector2.xAxis.Y, Vector2.xAxis.Magnitude, Vector2.xAxis.Unit},
+				Operador_De_yAxis = {Vector2.yAxis.X, Vector2.yAxis.Y, Vector2.yAxis.Magnitude, Vector2.yAxis.Unit}},
+			Vectores_De_Tres_Dimensiones = {
+				Operadores_Unicos_Dos_Dimensiones = {Vector3int16.new()},
+				Operadores_Generales = {Vector3.new()},
+				Operadores_De_One = {Vector3.one.X, Vector3.one.Y, Vector3.one.Magnitude, Vector3.one.Unit},
+				Operadores_De_Zero = {Vector3.zero.X, Vector3.zero.Y, Vector3.xAxis, Vector3.zero.Magnitude},
+				Operador_De_xAxix = {Vector3.xAxis.X, Vector3.xAxis.Y, Vector3.xAxis.Magnitude, Vector3.xAxis.Unit},
+				Operador_De_yAxis = {Vector3.yAxis.X, Vector3.yAxis.Y, Vector3.yAxis.Magnitude, Vector3.yAxis.Unit}},
+			Operador_CFrame = {CFrame.new(), CFrame.Angles(), CFrame.lookAt(), CFrame.identity, CFrame.fromMatrix(),
+				CFrame.fromAxisAngle(), CFrame.fromEulerAngles(), CFrame.fromOrientation(), CFrame.fromEulerAnglesXYZ(),
+				CFrame.fromEulerAnglesYXZ()},
+			Operadores_De_Region_3 = {Region3.new(), Region3int16.new()}},
+		Operadores_Para_Color = {
+			Secuencia_De_Color = {ColorSequence.new(), ColorSequenceKeypoint.new()},
+			Color_De_Ladrillo = {BrickColor.new(), BrickColor.Random(), BrickColor.random(), BrickColor.Red(),
+				BrickColor.Blue(), BrickColor.Gray(), BrickColor.Black(), BrickColor.White(), BrickColor.Green(),
+			BrickColor.Yellow(), BrickColor.palette(), BrickColor.DarkGray()},
+			Color_De_RGB = {Color3.fromRGB()},
+			Color_De_HSV = {Color3.fromHSV()},
+			Color_De_HEX = {Color3.fromHex()}},
+		Operadores_De_Settings = {
+			Setting_Naturales = {settings().Lua, settings().Game, settings().Studio, settings().Network,
+				settings().Physics, settings().Rendering, settings().Diagnostics},
+			Operadores_Unicos_De_Settings = {UserSettings()}},
+		Operadores_Con_Dos_Puntos = {Pieza:FindFirstChildOfClass(), Pieza:FindFirstChild(), Pieza:WaitForChild(),
+			Pieza:IsA(), Pieza:Clone(), Pieza:Remove(), Pieza:Destroy(), Pieza:GetChildren(), Pieza:GetAttribute(),
+			Pieza:GetPropertyChangedSignal(), Pieza:ClearAllChildren(), Pieza:FindFirstChildWhichIsA(),
+			Pieza:isA(), Pieza:AddTag(), Pieza:HasTag(), Pieza:Resize(), Pieza:GetMass(), Pieza:GetTags(),
+			Pieza:PivotTo(), Pieza:getMass(), Pieza:GetActor(), Pieza:GetPivot(), Pieza:GetJoints(), Pieza:RemoveTag(),
+			Pieza:IsGrounded(), Pieza:UnionAsync(), Pieza:GetFullName(), Pieza:GetRootPart(), Pieza:ApplyImpulse(),
+			Pieza:IsAncestorOf(), Pieza:SetAttribute(), Pieza:GetAttributes(), Pieza:SubtractAsync(), Pieza:CanCollideWith(),
+			Pieza:GetDescendants(), Pieza:IntersectAsync(), Pieza:IsDescendantOf(), Pieza:GetNetworkOwner(),
+			Pieza:SetNetworkOwner(), Pieza:GetTouchingParts(), Pieza:FindFirstAncestor(), Pieza:GetConnectedParts(),
+			Pieza:ApplyAngularImpulse(), Pieza:FindFirstDescendant(), Pieza:unionAsync2_INTERNAL(), Pieza:GetVelocityAtPosition(),
+			Pieza:ApplyImpulseAtPosition(), Pieza:CanSetNetworkOwnership(), Pieza:GetNetworkOwnershipAuto(),
+			Pieza:subtractAsync2_INTERNAL(), Pieza:SetNetworkOwnershipAuto(), Pieza:FindFirstAncestorOfClass(),
+		Pieza:GetClosestPointOnSurface(), Pieza:FindFirstAncestorWhichIsA(), Pieza:GetAttributeChangedSignal()},
+		Operador_Enum = {
+			Operadores_Unicos = {Enum.LanguagePreference, Enum.AdShape.HorizontalRectangle, Enum.Language.Default},
+			Operadores_CameraType = {Enum.CameraType.Custom, Enum.CameraType.Scriptable, Enum.CameraType.Fixed,
+				Enum.CameraType.Track, Enum.CameraType.Watch, Enum.CameraType.Attach, Enum.CameraType.Follow,
+				Enum.CameraType.Orbital},
+			Operador_InOut = {Enum.InOut.Edge, Enum.InOut.Inset, Enum.InOut.Center},
+			Operador_EasingStyle = {Enum.EasingStyle.Exponential, Enum.EasingStyle.Quad, Enum.EasingStyle.Sine,
+				Enum.EasingStyle.Elastic, Enum.EasingStyle.Back, Enum.EasingStyle.Cubic, Enum.EasingStyle.Cubic,
+				Enum.EasingStyle.Quart, Enum.EasingStyle.Quint, Enum.EasingStyle.Bounce, Enum.EasingStyle.Linear,
+				Enum.EasingStyle.Circular},
+			Operador_Easing_Direction = {Enum.EasingDirection.InOut, Enum.EasingDirection.Out, Enum.EasingDirection.In},
+			Operador_CoreGuiType = {Enum.CoreGuiType.Backpack, Enum.CoreGuiType.All, Enum.CoreGuiType.Health,
+				Enum.CoreGuiType.Chat, Enum.CoreGuiType.SelfView, Enum.CoreGuiType.EmotesMenu, Enum.CoreGuiType.PlayerList},
+			Operador_Genre = {Enum.Genre.All, Enum.Genre.War, Enum.Genre.Funny, Enum.Genre.Ninja, Enum.Genre.Scary,
+				Enum.Genre.SciFi, Enum.Genre.Pirate, Enum.Genre.Sports, Enum.Genre.Fantasy, Enum.Genre.Tutorial,
+				Enum.Genre.WildWest, Enum.Genre.Adventure, Enum.Genre.SkatePark, Enum.Genre.TownAndCity},
+			Operador_PlayBackState = {Enum.PlaybackState.Completed, Enum.PlaybackState.Begin, Enum.PlaybackState.Paused,
+				Enum.PlaybackState.Delayed, Enum.PlaybackState.Playing, Enum.PlaybackState.Cancelled},
+			Operador_Axis = {Enum.Axis.X, Enum.Axis.Y, Enum.Axis.Z},
+			Operador_Font = {Enum.Font.SciFi, Enum.Font.Fantasy, Enum.Font.Code, Enum.Font.Jura, Enum.Font.Arial,
+				Enum.Font.Kalam, Enum.Font.Arcade, Enum.Font.Bodoni, Enum.Font.Gotham, Enum.Font.Legacy,
+				Enum.Font.Nunito, Enum.Font.Oswald, Enum.Font.Roboto, Enum.Font.Ubuntu, Enum.Font.Antique,
+				Enum.Font.Bangers, Enum.Font.Cartoon, Enum.Font.DenkOne, Enum.Font.Highway, Enum.Font.Unknown,
+				Enum.Font.AmaticSC, Enum.Font.Garamond, Enum.Font.Michroma, Enum.Font.Sarpanch, Enum.Font.ArialBold,
+				Enum.Font.Creepster, Enum.Font.Fondamento, Enum.Font.FredokaOne, Enum.Font.GothamBold, Enum.Font.RobotoMono,
+				Enum.Font.SourceSans, Enum.Font.GothamBlack, Enum.Font.IndieFlower, Enum.Font.JosefinSans, Enum.Font.LuckiestGuy,
+				Enum.Font.PatrickHand, Enum.Font.GothamMedium, Enum.Font.Merriweather, Enum.Font.SpecialElite,
+				Enum.Font.TitilliumWeb, Enum.Font.GrenzeGotisch, Enum.Font.SourceSansBold, Enum.Font.PermanentMarker,
+				Enum.Font.RobotoCondensed, Enum.Font.SourceSansLight, Enum.Font.SourceSansItalic, Enum.Font.SourceSansSemibold},
+			Operador_Limb = {Enum.Limb.Unknown, Enum.Limb.Head, Enum.Limb.Torso, Enum.Limb.LeftArm,
+				Enum.Limb.LeftLeg, Enum.Limb.RightArm, Enum.Limb.RightLeg},
+			Operador_Style = {Enum.Style.NoSupports, Enum.Style.AlternatingSupports, Enum.Style.BridgeStyleSupports},
+			Operador_Button = {Enum.Button.Jump, Enum.Button.Dismount},
+			Operador_Status = {Enum.Status.Poison, Enum.Status.Confusion},
+			Operador_BinType = {Enum.BinType.Clone, Enum.BinType.Script, Enum.BinType.Grab, Enum.BinType.Hammer,
+				Enum.BinType.GameTool},
+			Operador_GuiType = {Enum.GuiType.Custom, Enum.GuiType.Core, Enum.GuiType.CustomBillboards,
+				Enum.GuiType.PlayerNameplates},
+			Operador_Keycode = {Enum.KeyCode.X, Enum.KeyCode.Y, Enum.KeyCode.Z, Enum.KeyCode.Unknown,
+				Enum.KeyCode.V, Enum.KeyCode.Menu, Enum.KeyCode.A, Enum.KeyCode.B, Enum.KeyCode.C,
+				Enum.KeyCode.D, Enum.KeyCode.E, Enum.KeyCode.F, Enum.KeyCode.G, Enum.KeyCode.H,
+				Enum.KeyCode.I, Enum.KeyCode.J, Enum.KeyCode.K, Enum.KeyCode.L, Enum.KeyCode.M,
+				Enum.KeyCode.N, Enum.KeyCode.O, Enum.KeyCode.P, Enum.KeyCode.Q, Enum.KeyCode.R,
+				Enum.KeyCode.S, Enum.KeyCode.T, Enum.KeyCode.U, Enum.KeyCode.W, Enum.KeyCode.At,
+				Enum.KeyCode.F1, Enum.KeyCode.F2, Enum.KeyCode.F3, Enum.KeyCode.F4,
+				Enum.KeyCode.F5, Enum.KeyCode.F6, Enum.KeyCode.F7, Enum.KeyCode.F8, Enum.KeyCode.F9,
+				Enum.KeyCode.F10, Enum.KeyCode.F11, Enum.KeyCode.F12, Enum.KeyCode.F13,
+				Enum.KeyCode.F14, Enum.KeyCode.F15, Enum.KeyCode.Up, Enum.KeyCode.End,
+				Enum.KeyCode.One, Enum.KeyCode.Six, Enum.KeyCode.Tab, Enum.KeyCode.Two, Enum.KeyCode.Down,
+				Enum.KeyCode.Euro, Enum.KeyCode.Five, Enum.KeyCode.Four, Enum.KeyCode.Hash, Enum.KeyCode.Help,
+				Enum.KeyCode.Home, Enum.KeyCode.Left, Enum.KeyCode.Mode, Enum.KeyCode.Nine, Enum.KeyCode.Pipe,
+				Enum.KeyCode.Plus, Enum.KeyCode.Undo, Enum.KeyCode.Zero, Enum.KeyCode.Break, Enum.KeyCode.Caret,
+				Enum.KeyCode.Clear, Enum.KeyCode.Colon, Enum.KeyCode.Comma, Enum.KeyCode.Eight, Enum.KeyCode.Minus,
+				Enum.KeyCode.Pause, Enum.KeyCode.Power, Enum.KeyCode.Print, Enum.KeyCode.Quote, Enum.KeyCode.Right,
+				Enum.KeyCode.Seven, Enum.KeyCode.Slash, Enum.KeyCode.Space, Enum.KeyCode.Three, Enum.KeyCode.Tilde,
+				Enum.KeyCode.DPadUp, Enum.KeyCode.Delete, Enum.KeyCode.Dollar, Enum.KeyCode.Equals, Enum.KeyCode.Escape,
+				Enum.KeyCode.Insert, Enum.KeyCode.PageUp, Enum.KeyCode.Period, Enum.KeyCode.Return, Enum.KeyCode.SysReq,
+				Enum.KeyCode.World0, Enum.KeyCode.World1, Enum.KeyCode.World2, Enum.KeyCode.World3, Enum.KeyCode.World4,
+				Enum.KeyCode.World5, Enum.KeyCode.World6, Enum.KeyCode.World7, Enum.KeyCode.World8, Enum.KeyCode.World9,
+				Enum.KeyCode.ButtonA, Enum.KeyCode.ButtonB, Enum.KeyCode.ButtonX, Enum.KeyCode.ButtonY, Enum.KeyCode.Compose,
+				Enum.KeyCode.LeftAlt, Enum.KeyCode.NumLock, Enum.KeyCode.Percent, Enum.KeyCode.World10, Enum.KeyCode.World11,
+				Enum.KeyCode.World12, Enum.KeyCode.World13, Enum.KeyCode.World14, Enum.KeyCode.World15, Enum.KeyCode.World16,
+				Enum.KeyCode.World17, Enum.KeyCode.World18, Enum.KeyCode.World19, Enum.KeyCode.World20, Enum.KeyCode.World21,
+				Enum.KeyCode.World22, Enum.KeyCode.World23, Enum.KeyCode.World24, Enum.KeyCode.World25, Enum.KeyCode.World26,
+				Enum.KeyCode.World27, Enum.KeyCode.World28, Enum.KeyCode.World29, Enum.KeyCode.World30, Enum.KeyCode.World31,
+				Enum.KeyCode.World32, Enum.KeyCode.World33, Enum.KeyCode.World34, Enum.KeyCode.World35, Enum.KeyCode.World36,
+				Enum.KeyCode.World37, Enum.KeyCode.World38, Enum.KeyCode.World39, Enum.KeyCode.World40, Enum.KeyCode.World41,
+				Enum.KeyCode.World42, Enum.KeyCode.World43, Enum.KeyCode.World44, Enum.KeyCode.World45, Enum.KeyCode.World46,
+				Enum.KeyCode.World47, Enum.KeyCode.World48, Enum.KeyCode.World49, Enum.KeyCode.World50, Enum.KeyCode.World51,
+				Enum.KeyCode.World52, Enum.KeyCode.World53, Enum.KeyCode.World54, Enum.KeyCode.World55, Enum.KeyCode.World56,
+				Enum.KeyCode.World57, Enum.KeyCode.World58, Enum.KeyCode.World59, Enum.KeyCode.World60, Enum.KeyCode.World61, 
+				Enum.KeyCode.World62, Enum.KeyCode.World63, Enum.KeyCode.World64, Enum.KeyCode.World65, Enum.KeyCode.World66,
+				Enum.KeyCode.World67, Enum.KeyCode.World68, Enum.KeyCode.World69, Enum.KeyCode.World70, Enum.KeyCode.World71,
+				Enum.KeyCode.World72, Enum.KeyCode.World73, Enum.KeyCode.World74, Enum.KeyCode.World75, Enum.KeyCode.World76,
+				Enum.KeyCode.World77, Enum.KeyCode.World78, Enum.KeyCode.World79, Enum.KeyCode.World80, Enum.KeyCode.World81,
+				Enum.KeyCode.World82, Enum.KeyCode.World83, Enum.KeyCode.World84, Enum.KeyCode.World85, Enum.KeyCode.World86,
+				Enum.KeyCode.World87, Enum.KeyCode.World88, Enum.KeyCode.World89, Enum.KeyCode.World90, Enum.KeyCode.World91,
+				Enum.KeyCode.World92, Enum.KeyCode.World93, Enum.KeyCode.World94, Enum.KeyCode.World95, Enum.KeyCode.Asterisk,
+				Enum.KeyCode.ButtonL1, Enum.KeyCode.ButtonL2, Enum.KeyCode.ButtonL3, Enum.KeyCode.CapsLock, Enum.KeyCode.ButtonR1,
+				Enum.KeyCode.ButtonR2, Enum.KeyCode.ButtonR3, Enum.KeyCode.DPadLeft, Enum.KeyCode.LeftMeta, Enum.KeyCode.LessThan,
+				Enum.KeyCode.PageDown, Enum.KeyCode.Question, Enum.KeyCode.RightAlt, Enum.KeyCode.Ampersand, Enum.KeyCode.BackSlash,
+				Enum.KeyCode.Backquote, Enum.KeyCode.Backspace, Enum.KeyCode.DPadRight, Enum.KeyCode.KeypadOne, Enum.KeyCode.KeypadSix,
+				Enum.KeyCode.KeypadTwo, Enum.KeyCode.LeftCurly, Enum.KeyCode.LeftShift, Enum.KeyCode.LeftSuper, Enum.KeyCode.RightMeta,
+				Enum.KeyCode.Semicolon, Enum.KeyCode.KeypadFive, Enum.KeyCode.KeypadFour, Enum.KeyCode.KeypadNine, Enum.KeyCode.KeypadPlus,
+				Enum.KeyCode.KeypadZero, Enum.KeyCode.RightCurly, Enum.KeyCode.RightShift, Enum.KeyCode.RightSuper, Enum.KeyCode.ScrollLock,
+				Enum.KeyCode.Underscore, Enum.KeyCode.ButtonStart, Enum.KeyCode.GreaterThan, Enum.KeyCode.KeypadEight, Enum.KeyCode.KeypadEnter,
+				Enum.KeyCode.KeypadMinus, Enum.KeyCode.KeypadSeven, Enum.KeyCode.KeypadThree, Enum.KeyCode.LeftBracket, Enum.KeyCode.LeftControl,
+				Enum.KeyCode.Thumbstick1, Enum.KeyCode.Thumbstick2, Enum.KeyCode.ButtonSelect, Enum.KeyCode.KeypadDivide, Enum.KeyCode.KeypadEquals,
+				Enum.KeyCode.KeypadPeriod, Enum.KeyCode.QuotedDouble, Enum.KeyCode.RightBracket, Enum.KeyCode.RightControl,Enum.KeyCode.KeypadMultiply,
+				Enum.KeyCode.LeftParenthesis, Enum.KeyCode.RightParenthesis},
+			Operador_RigType = {Enum.RigType.Custom, Enum.RigType.R15, Enum.RigType.None},
+			Operador_UITheme = {Enum.UITheme.Dark, Enum.UITheme.Light},
+			Operador_BodyPart = {Enum.BodyPart.Head, Enum.BodyPart.Torso, Enum.BodyPart.LeftArm, Enum.BodyPart.LeftLeg,
+				Enum.BodyPart.RightArm, Enum.BodyPart.RightLeg},
+			Operador_CageType = {Enum.CageType.Inner, Enum.CageType.Outer},
+			Operador_ChatMode = {Enum.ChatMode.Menu, Enum.ChatMode.TextAndMenu},
+			Operador_FontSize = {Enum.FontSize.Size8, Enum.FontSize.Size9, Enum.FontSize.Size10, Enum.FontSize.Size11,
+				Enum.FontSize.Size12, Enum.FontSize.Size14, Enum.FontSize.Size18, Enum.FontSize.Size24,
+				Enum.FontSize.Size28, Enum.FontSize.Size32, Enum.FontSize.Size36, Enum.FontSize.Size42,
+				Enum.FontSize.Size48, Enum.FontSize.Size60, Enum.FontSize.Size96},
+			Operador_GearType = {Enum.GearType.PowerUps, Enum.GearType.Transport, Enum.GearType.Explosives,
+				Enum.GearType.SocialItems, Enum.GearType.MeleeWeapons, Enum.GearType.BuildingTools, Enum.GearType.RangedWeapons,
+				Enum.GearType.MusicalInstruments, Enum.GearType.NavigationEnhancers},
+			Operador_InfoType = {Enum.InfoType.Asset, Enum.InfoType.Bundle, Enum.InfoType.Product, Enum.InfoType.GamePass,
+				Enum.InfoType.Subscription},
+			Operador_Material = {Enum.Material.Air, Enum.Material.Ice, Enum.Material.Mud, Enum.Material.Foil,
+				Enum.Material.Neon, Enum.Material.Rock, Enum.Material.Salt, Enum.Material.Sand, Enum.Material.Snow,
+				Enum.Material.Wood, Enum.Material.Brick, Enum.Material.Glass, Enum.Material.Grass, Enum.Material.Metal,
+				Enum.Material.Slate, Enum.Material.Water, Enum.Material.Basalt, Enum.Material.Fabric,
+				Enum.Material.Ground, Enum.Material.Marble, Enum.Material.Pebble, Enum.Material.Asphalt,
+				Enum.Material.Glacier, Enum.Material.Granite, Enum.Material.Plastic, Enum.Material.Concrete,
+				Enum.Material.Pavement, Enum.Material.Limestone, Enum.Material.Sandstone, Enum.Material.ForceField,
+				Enum.Material.LeafyGrass, Enum.Material.WoodPlanks, Enum.Material.Cobblestone, Enum.Material.CrackedLava,
+				Enum.Material.DiamondPlate, Enum.Material.CorrodedMetal, Enum.Material.SmoothPlastic},
+			Operador_MeshType = {Enum.MeshType.Head, Enum.MeshType.Torso, Enum.MeshType.Brick, Enum.MeshType.Prism,
+				Enum.MeshType.Wedge, Enum.MeshType.Sphere, Enum.MeshType.Pyramid, Enum.MeshType.Cylinder, Enum.MeshType.Cylinder,
+				Enum.MeshType.FileMesh, Enum.MeshType.CornerWedge, Enum.MeshType.ParallelRamp},
+			Operador_NormalID = {Enum.NormalId.Back, Enum.NormalId.Top, Enum.NormalId.Left, Enum.NormalId.Right,
+				Enum.NormalId.Front, Enum.NormalId.Bottom},
+			Operador_PartType = {Enum.PartType.Cylinder, Enum.PartType.Wedge, Enum.PartType.CornerWedge,
+				Enum.PartType.Ball, Enum.PartType.Block},
+			Operador_Platform = {Enum.Platform.None, Enum.Platform.NX, Enum.Platform.DOS, Enum.Platform.IOS,
+				Enum.Platform.OSX, Enum.Platform.PS3, Enum.Platform.PS4, Enum.Platform.UWP, Enum.Platform.BeOS,
+				Enum.Platform.Ouya, Enum.Platform.WiiU, Enum.Platform.Linux, Enum.Platform.WebOS,
+				Enum.Platform.Android, Enum.Platform.SteamOS, Enum.Platform.Windows, Enum.Platform.XBox360,
+				Enum.Platform.XBoxOne, Enum.Platform.AndroidTV, Enum.Platform.Chromecast},
+			Operador_RestPose = {Enum.RestPose.Custom, Enum.RestPose.Default, Enum.RestPose.RotationsReset},
+			Operador_RigScale = {Enum.RigScale.Default, Enum.RigScale.Rthro, Enum.RigScale.RthroNarrow},
+			Operador_Saverity = {Enum.Severity.Error, Enum.Severity.Hint, Enum.Severity.Warning, Enum.Severity.Information},
+			Operador_AlignType = {Enum.AlignType.Parallel, Enum.AlignType.Perpendicular},
+			Operador_AlphaMode = {Enum.AlphaMode.Transparency, Enum.AlphaMode.Overlay},
+			Operador_AssetType = {Enum.AssetType.Model, Enum.AssetType.Animation, Enum.AssetType.Head,
+				Enum.AssetType.Torso, Enum.AssetType.Image, Enum.AssetType.LeftArm, Enum.AssetType.LeftLeg,
+				Enum.AssetType.RightArm, Enum.AssetType.RightArm, Enum.AssetType.RightLeg, Enum.AssetType.Lua,
+				Enum.AssetType.GamePass, Enum.AssetType.BackAccessory, Enum.AssetType.Hat, Enum.AssetType.Face,
+				Enum.AssetType.Gear, Enum.AssetType.Mesh, Enum.AssetType.Audio, Enum.AssetType.Badge,
+				Enum.AssetType.Decal, Enum.AssetType.Pants, Enum.AssetType.Place, Enum.AssetType.Shirt,
+				Enum.AssetType.Video, Enum.AssetType.Plugin, Enum.AssetType.TShirt, Enum.AssetType.Video,
+				Enum.AssetType.Package, Enum.AssetType.MeshPart, Enum.AssetType.FontFamily, Enum.AssetType.FontFamily,
+				Enum.AssetType.DynamicHead, Enum.AssetType.EarAccessory, Enum.AssetType.EyeAccessory, Enum.AssetType.RunAnimation,
+				Enum.AssetType.FaceAccessory, Enum.AssetType.FallAnimation, Enum.AssetType.HairAccessory,
+				Enum.AssetType.IdleAnimation, Enum.AssetType.JumpAnimation, Enum.AssetType.MoodAnimation,
+				Enum.AssetType.NeckAccessory, Enum.AssetType.PoseAnimation, Enum.AssetType.SwimAnimation,
+				Enum.AssetType.WalkAnimation, Enum.AssetType.ClimbAnimation, Enum.AssetType.DeathAnimation,
+				Enum.AssetType.EmoteAnimation, Enum.AssetType.FrontAccessory, Enum.AssetType.PantsAccessory,
+				Enum.AssetType.ShirtAccessory, Enum.AssetType.WaistAccessory, Enum.AssetType.JacketAccessory,
+				Enum.AssetType.ShortsAccessory, Enum.AssetType.TShirtAccessory, Enum.AssetType.EyebrowAccessory,
+				Enum.AssetType.EyelashAccessory, Enum.AssetType.SweaterAccessory, Enum.AssetType.LeftShoeAccessory,
+				Enum.AssetType.ShoulderAccessory, Enum.AssetType.RightShoeAccessory, Enum.AssetType.DressSkirtAccessory,},
+			Operador_CellBlock = {Enum.CellBlock.CornerWedge, Enum.CellBlock.Solid, Enum.CellBlock.VerticalWedge,
+				Enum.CellBlock.HorizontalWedge, Enum.CellBlock.InverseCornerWedge},
+			Operador_ChatColor = {Enum.ChatColor.Red, Enum.ChatColor.Blue, Enum.ChatColor.Green, Enum.ChatColor.White},
+			Operador_ChatStyle = {Enum.ChatStyle.Bubble, Enum.ChatStyle.Classic, Enum.ChatStyle.ClassicAndBubble},
+			Operador_HHTTPError = {Enum.HttpError.Unknown, Enum.HttpError.OK, Enum.HttpError.Aborted, Enum.HttpError.NetFail,
+				Enum.HttpError.TimedOut, Enum.HttpError.DnsResolve, Enum.HttpError.InvalidUrl, Enum.HttpError.ConnectFail,
+				Enum.HttpError.OutOfMemory, Enum.HttpError.SslConnectFail, Enum.HttpError.InvalidRedirect,
+				Enum.HttpError.SslVerificationFail},
+			--[[Hay muchos más operadores para enum, pero no los pondré todos, ya que
+			estoy segura de que mucho de esos no los usarás--]] },
+		Operadores_De_Utf8 = {utf8.len(), utf8.offset(), utf8.codepoint(), utf8.char(), utf8.codes(),
+			utf8.graphemes(), utf8.charpattern, utf8.nfcnormalize(), utf8.nfdnormalize()},
+		Operadores_De_Bit32 = {bit32.bor(), bit32.band(), bit32.bnot(), bit32.bxor(), bit32.lshift(),
+			bit32.rshift(), bit32.arshift(), bit32.countlz(), bit32.countrz(), bit32.extract(),
+			bit32.lrotate(), bit32.replace(), bit32.rrotate(), bit32.btest()},
+		Operadores_De_FENV = {setfenv(), getfenv()},
+		Operadores_De_DateTime = {DateTime.now(), DateTime.fromLocalTime(), DateTime.fromUniversalTime(),
+			DateTime.fromUnixTimestamp(), DateTime.fromUnixTimestampMillis(), DateTime.fromIsoDate()}}
+	--
+}
+
+--[[-- EJEMPLOS CON LOS OPERADORES DE LUA --]]--
+
+NOTA = {'Veremos cómo utilizar los operadores de Lua y para qué sirven'}
+
+--[[
+Puede resultar largo, así que, espero que este siguiente listado de ejemplos, te funcione para comprender
+con claridad lo que trataré de exponerte
+--]]
+
+EJEMPLOS()
+
+-- Operadores únicos
+-- print(): Imprime un mensaje en la consola
+print("¡Hola, mundo!")
+
+--assert() verifica si un numero es mayor a cero
+-- Verifica si un número es mayor que cero
+local number = 5
+assert(number > 0, "El número debe ser mayor que cero")
+print("Después de la aserción") -- Si la aserción es verdadera, este mensaje se imprimirá
+
+-- loadstring(): Carga y ejecuta código Lua desde una cadena, es bastante curioso y útil de saber
+local code = "print('Hola desde loadstring()')"
+loadstring(code)()
+
+-- tick(): Devuelve el tiempo transcurrido en segundos desde que se inició el programa
+local time = tick()
+print("Tiempo transcurrido:", time)
+
+-- pcall(): Intenta ejecutar una función y captura cualquier error que se produzca
+local success, result = pcall(function()
+	error("¡Hubo un error!")
+end)
+print("¿Éxito?", success) -- false
+print("Error:", result) -- ¡Hubo un error!
+
+-- pairs(): Itera sobre una tabla y devuelve pares clave-valor
+local t = {a = 1, b = 2, c = 3}
+for key, value in pairs(t) do
+	print(key, value)
+end
+
+-- Operadores de tipo
+-- type(): Devuelve el tipo de un valor
+local value = 42
+print("Tipo:", type(value))
+
+-- typeof(): Devuelve el tipo de un valor como cadena de texto
+local value = "Hola, mundo!"
+print("Tipo:", typeof(value))
+
+-- tostring(): Convierte un valor en una cadena de texto
+local value = 42
+local str = tostring(value)
+print("Cadena:", str)
+
+-- tonumber(): Convierte un valor en un número
+local str = "42"
+local value = tonumber(str)
+print("Número:", value)
+
+-- Operadores de raw
+-- rawget(): Accede al valor de una tabla sin invocar metamétodos
+local t = {a = 1, b = 2, c = 3}
+local value = rawget(t, "b")
+print("Valor:", value)
+
+-- rawlen(): Devuelve la longitud de una tabla sin invocar metamétodos
+local t = {1, 2, 3}
+local length = rawlen(t)
+print("Longitud:", length)
+
+-- rawset(): Asigna un valor a una tabla sin invocar metamétodos
+local t = {}
+rawset(t, "key", "value")
+print("Tabla:", t.key)
+
+-- rawequal(): Compara dos valores sin invocar metamétodos
+local a = {}
+local b = {}
+local equal = rawequal(a, b)
+print("¿Iguales?", equal)
+
+-- Operadores de get
+-- getfenv(): Obtiene el entorno de una función
+local function myFunction()
+	print("¡Hola desde myFunction!")
+end
+local env = getfenv(myFunction)
+print("Entorno:", env)
+
+-- getmetatable(): Obtiene la metatabla de un valor
+local t = {}
+local metatable = getmetatable(t)
+print("Metatabla:", metatable)
+
+-- Operadores de cadena
+-- string.unpack(): Desempaqueta una cadena formateada
+local format = "<i4i4"
+local data = "\x01\x00\x00\x00\x02\x00\x00\x00"
+local value1, value2 = string.unpack(format, data)
+print("Valores:", value1, value2)
+
+-- string.sub(): Devuelve una subcadena de una cadena
+local str = "¡Hola, mundo!"
+local sub = string.sub(str, 5, 9)
+print("Subcadena:", sub)
+
+-- string.len(): Devuelve la longitud de una cadena
+local str = "¡Hola, mundo!"
+local length = string.len(str)
+print("Longitud:", length)
+
+-- string.rep(): Repite una cadena un número de veces
+local str = "Hola"
+local repeated = string.rep(str, 3)
+print("Repetida:", repeated)
+
+-- string.byte(): Devuelve el código ASCII de un carácter en una cadena
+local str = "ABC"
+local byte = string.byte(str, 2)
+print("Código ASCII:", byte)
+
+-- string.char(): Devuelve un carácter ASCII dado su código
+local byte = 65
+local char = string.char(byte)
+print("Carácter:", char)
+
+-- string.find(): Encuentra la posición de una subcadena en una cadena
+local str = "¡Hola, mundo!"
+local start, finish = string.find(str, "mundo")
+print("Inicio y fin:", start, finish)
+
+-- string.gsub(): Reemplaza todas las coincidencias de una subcadena en una cadena
+local str = "¡Hola, mundo!"
+local newStr, count = string.gsub(str, "mundo", "amigo")
+print("Cadena nueva:", newStr)
+print("Coincidencias:", count)
+
+-- string.pack(): Empaqueta valores en una cadena con un formato dado
+local format = "<i4i4"
+local value1, value2 = 42, 99
+local packed = string.pack(format, value1, value2)
+print("Empaquetada:", packed)
+
+-- string.lower(): Convierte una cadena a minúsculas
+local str = "¡Hola, mundo!"
+local lowerStr = string.lower(str)
+print("Minúsculas:", lowerStr)
+
+-- string.match(): Encuentra la primera coincidencia de un patrón en una cadena
+local str = "¡Hola, mundo!"
+local match = string.match(str, "mundo")
+print("Coincidencia:", match)
+
+-- string.split(): Divide una cadena en una tabla de subcadenas
+local str = "Hola,mundo,cómo,estás"
+local delimiter = ","
+local parts = {}
+for part in string.gmatch(str, "[^" .. delimiter .. "]+") do
+	table.insert(parts, part)
+end
+print("Partes:", unpack(parts))
+
+-- string.upper(): Convierte una cadena a mayúsculas
+local str = "¡Hola, mundo!"
+local upperStr = string.upper(str)
+print("Mayúsculas:", upperStr)
+
+-- string.format(): Formatea una cadena con valores variables
+local name = "John"
+local age = 30
+local str = string.format("Mi nombre es %s y tengo %d años.", name, age)
+print("Cadena formateada:", str)
+
+-- string.gmatch(): Encuentra todas las coincidencias de un patrón en una cadena
+local str = "Hola, mundo"
+for word in string.gmatch(str, "%a+") do
+	print("Palabra:", word)
+end
+
+-- string.reverse(): Invierte una cadena
+local str = "¡Hola, mundo!"
+local reversed = string.reverse(str)
+print("Invertida:", reversed)
+
+-- string.packsize(): Devuelve el tamaño en bytes de un formato de cadena
+local format = "<i4i4"
+local size = string.packsize(format)
+print("Tamaño:", size)
+
+-- Operadores de os
+-- os.date(): Devuelve una cadena formateada con la fecha y hora actuales
+local date = os.date("%Y-%m-%d %H:%M:%S")
+print("Fecha y hora:", date)
+
+-- os.time(): Devuelve el tiempo en segundos desde una fecha y hora especificadas
+local time = os.time({year = 2023, month = 5, day = 16, hour = 12, min = 0, sec = 0})
+print("Tiempo:", time)
+
+-- os.clock(): Devuelve el tiempo de CPU utilizado por el programa en segundos
+local start = os.clock()
+-- Código para medir el tiempo de ejecución
+local finish = os.clock()
+local elapsed = finish - start
+print("Tiempo transcurrido:", elapsed)
+
+-- os.difftime(): Calcula la diferencia en segundos entre dos tiempos
+local start = os.time({year = 2023, month = 5, day = 15})
+local finish = os.time({year = 2023, month = 5, day = 16})
+local difference = os.difftime(finish, start)
+print("Diferencia:", difference)
+
+-- Operadores de coroutine
+-- coroutine.wrap(): Crea una función envuelta en una coroutine
+local function myCoroutine()
+	print("Coroutine iniciada")
+	coroutine.yield()
+	print("Coroutine reanudada")
+end
+local co = coroutine.wrap(myCoroutine)
+co()
+co()
+
+-- coroutine.close(): Cierra una coroutine
+function miFuncionCoroutine()
+	print("Coroutine iniciada")
+end
+local co = coroutine.create(myCoroutine)
+coroutine.close(co)
+
+-- coroutine.yield: Suspende la ejecución de una coroutine
+function my_Coroutine()
+	print("Coroutine iniciada")
+	coroutine.yield()
+	print("Coroutine reanudada")
+end
+local co = coroutine.create(myCoroutine)
+coroutine.resume(co)
+print("Coroutine en pausa")
+coroutine.resume(co)
+
+-- coroutine.create(): Crea una nueva coroutine
+function MyCoroutine()
+	print("Coroutine iniciada")
+end
+local co = coroutine.create(myCoroutine)
+coroutine.resume(co)
+
+-- coroutine.resume(): Reanuda la ejecución de una coroutine
+local function Funcion_My_Coroutine()
+	print("Coroutine iniciada")
+end
+local co = coroutine.create(myCoroutine)
+coroutine.resume(co)
+
+-- coroutine.status(): Devuelve el estado de una coroutine
+local function Funcion_Coroutine()
+	print("Coroutine iniciada")
+end
+local co = coroutine.create(myCoroutine)
+print("Estado:", coroutine.status(co))
+
+-- coroutine.running(): Devuelve la coroutine en ejecución actualmente
+local function My_Coroutine()
+	print("Coroutine en ejecución:", coroutine.running())
+end
+local co = coroutine.create(myCoroutine)
+coroutine.resume(co)
+
+-- coroutine.isyieldable(): Comprueba si el hilo actual es yieldable
+print("¿Es yieldable?", coroutine.isyieldable())
+
+-- Operadores de math
+-- math.rad(): Convierte un ángulo de grados a radianes
+local degrees = 90
+local radians = math.rad(degrees)
+print("Radianes:", radians)
+
+-- math.pi: Constante que representa el valor de Pi
+print("Pi:", math.pi)
+
+-- math.abs(): Devuelve el valor absoluto de un número
+local number = -42
+local absolute = math.abs(number)
+print("Valor absoluto:", absolute)
+
+-- math.cos(): Devuelve el coseno de un ángulo en radianes
+local angle = math.pi / 4
+local cosine = math.cos(angle)
+print("Coseno:", cosine)
+
+-- math.deg(): Convierte un ángulo de radianes a grados
+local radians = math.pi / 2
+local degrees = math.deg(radians)
+print("Grados:", degrees)
+
+-- math.exp(): Calcula la exponencial de un número
+local number = 2
+local exponential = math.exp(number)
+print("Exponencial:", exponential)
+
+-- math.log(): Calcula el logaritmo natural de un número
+local number = 10
+local logarithm = math.log(number)
+print("Logaritmo:", logarithm)
+
+-- math.max(): Devuelve el valor máximo entre dos o más números
+local max = math.max(10, 5, 8)
+print("Máximo:", max)
+
+-- math.min(): Devuelve el valor mínimo entre dos o más números
+local min = math.min(10, 5, 8)
+print("Mínimo:", min)
+
+-- math.pow(): Calcula la potencia de un número a otro
+local base = 2
+local exponent = 3
+local power = math.pow(base, exponent)
+print("Potencia:", power)
+
+-- math.sin(): Devuelve el seno de un ángulo en radianes
+local angle = math.pi / 4
+local sine = math.sin(angle)
+print("Seno:", sine)
+
+-- math.tan(): Devuelve la tangente de un ángulo en radianes
+local angle = math.pi / 4
+local tangent = math.tan(angle)
+print("Tangente:", tangent)
+
+-- math.acos(): Calcula el arcocoseno de un número
+local number = 0.5
+local arccosine = math.acos(number)
+print("Arcocoseno:", arccosine)
+
+-- math.asin(): Calcula el arcoseno de un número
+local number = 0.5
+local arcsine = math.asin(number)
+print("Arcoseno:", arcsine)
+
+-- math.atan(): Calcula el arcotangente de un número
+local number = 1
+local arctangent = math.atan(number)
+print("Arcotangente:", arctangent)
+
+-- math.ceil(): Redondea un número hacia arriba al entero más cercano
+local number = 3.14
+local rounded = math.ceil(number)
+print("Redondeado:", rounded)
+
+-- math.cosh(): Calcula el coseno hiperbólico de un número
+local number = 1
+local hyperbolicCosine = math.cosh(number)
+print("Coseno hiperbólico:", hyperbolicCosine)
+
+-- math.fmod(): Calcula el resto de la división de dos números
+local dividend = 10
+local divisor = 3
+local remainder = math.fmod(dividend, divisor)
+print("Resto:", remainder)
+
+-- math.huge: Valor que representa un número infinito
+print("Infinito:", math.huge)
+
+-- math.modf(): Devuelve la parte entera y decimal de un número
+local number = 3.14
+local integer, decimal = math.modf(number)
+print("Parte entera y decimal:", integer, decimal)
+
+-- math.sign(): Devuelve el signo de un número (-1 para negativo, 0 para cero, 1 para positivo)
+local number = -42
+local sign = math.sign(number)
+print("Signo:", sign)
+
+-- math.sinh(): Calcula el seno hiperbólico de un número
+local number = 1
+local hyperbolicSine = math.sinh(number)
+print("Seno hiperbólico:", hyperbolicSine)
+
+-- math.sqrt(): Calcula la raíz cuadrada de un número
+local number = 16
+local squareRoot = math.sqrt(number)
+print("Raíz cuadrada:", squareRoot)
+
+-- math.tanh(): Calcula la tangente hiperbólica de un número
+local number = 1
+local hyperbolicTangent = math.tanh(number)
+print("Tangente hiperbólica:", hyperbolicTangent)
+
+-- math.atan2(): Calcula el arcotangente de las coordenadas X e Y
+local x = 1
+local y = 1
+local arctangent2 = math.atan2(y, x)
+print("Arcotangente:", arctangent2)
+
+-- math.clamp(): Limita un número dentro de un rango específico
+local number = 5
+local minRange = 0
+local maxRange = 10
+local clamped = math.clamp(number, minRange, maxRange)
+print("Limitado:", clamped)
+
+-- math.floor(): Redondea un número hacia abajo al entero más cercano
+local number = 3.14
+local rounded = math.floor(number)
+print("Redondeado:", rounded)
+
+-- math.frexp(): Descompone un número en su parte fraccional y exponente
+local number = 10
+local fraction, exponent = math.frexp(number)
+print("Fracción y exponente:", fraction, exponent)
+
+-- math.ldexp(): Construye un número a partir de su parte fraccional y exponente
+local fraction = 0.625
+local exponent = 3
+local number = math.ldexp(fraction, exponent)
+print("Número:", number)
+
+-- math.log10(): Calcula el logaritmo base 10 de un número
+local number = 100
+local logarithm10 = math.log10(number)
+print("Logaritmo base 10:", logarithm10)
+
+-- math.noise(): Genera un valor de ruido para las coordenadas X, Y y Z
+local x = 0.5
+local y = 0.2
+local z = 0.8
+local noise = math.noise(x, y, z)
+print("Valor de ruido:", noise)
+
+-- math.round(): Redondea un número al entero más cercano
+local number = 3.6
+local rounded = math.round(number)
+print("Redondeado:", rounded)
+
+-- math.random(): Genera un número aleatorio en el rango [0, 1)
+local random = math.random()
+print("Aleatorio:", random)
+
+-- math.randomseed(): Configura la semilla para la generación de números aleatorios
+math.randomseed(os.time())
+local random = math.random()
+print("Aleatorio:", random)
+
+-- Operadores para tablas (table)
+-- Operador table.unpack(): Desempaqueta los elementos de una tabla en múltiples valores
+local values = {1, 2, 3}
+print("Desempaquetados:", table.unpack(values))
+
+-- Operador table.find(): Busca un valor en una tabla y devuelve su índice
+local fruits = {"manzana", "naranja", "plátano"}
+local index = table.find(fruits, "naranja")
+print("Índice:", index)
+
+-- Operador table.maxn(): Devuelve el índice máximo en una tabla
+local fruits = {"manzana", "naranja", "plátano"}
+local maxIndex = table.maxn(fruits)
+print("Índice máximo:", maxIndex)
+
+-- Operador table.pack(): Empaqueta los argumentos en una tabla
+local values = table.pack(1, 2, 3)
+print("Empaquetados:", unpack(values))
+
+-- Operador table.clear(): Elimina todos los elementos de una tabla
+local fruits = {"manzana", "naranja", "plátano"}
+table.clear(fruits)
+print("Tabla vacía:", unpack(fruits))
+
+-- Operador table.create(): Crea una nueva tabla con capacidad predefinida
+local capacity = 5
+local newTable = table.create(capacity)
+print("Nueva tabla:", newTable)
+
+-- Operador table.move(): Mueve los elementos de una tabla a otra ubicación
+local source = {1, 2, 3}
+local destination = {}
+table.move(source, 1, 3, 1, destination)
+print("Destino:", unpack(destination))
+
+-- Operador table.sort(): Ordena los elementos de una tabla
+local numbers = {3, 1, 2}
+table.sort(numbers)
+print("Ordenados:", unpack(numbers))
+
+-- Operador table.clone(): Crea una copia superficial de una tabla
+local original = {1, 2, 3}
+local clone = table.clone(original)
+print("Clon:", unpack(clone))
+
+-- Operador table.concat(): Concatena los elementos de una tabla en una cadena
+local fruits = {"manzana", "naranja", "plátano"}
+local concatenated = table.concat(fruits, ", ")
+print("Concatenados:", concatenated)
+
+-- Operador table.freeze(): Hace que una tabla sea inmutable
+local data = {1, 2, 3}
+table.freeze(data)
+data[1] = 4 -- Genera un error, la tabla es inmutable
+
+-- Operador table.insert(): Inserta un elemento en una tabla en una posición específica
+local fruits = {"manzana", "naranja", "plátano"}
+table.insert(fruits, 2, "uva")
+print("Insertado:", unpack(fruits))
+
+-- Operador table.remove(): Elimina un elemento de una tabla en una posición específica
+local fruits = {"manzana", "naranja", "plátano"}
+table.remove(fruits, 2)
+print("Eliminado:", unpack(fruits))
+
+-- Operador table.isfrozen(): Comprueba si una tabla es inmutable
+local data = {1, 2, 3}
+local isFrozen = table.isfrozen(data)
+print("¿Es inmutable?", isFrozen)
+
+-- Operadores adicionales
+-- Operador setmetatable(): Establece la metatabla de un objeto
+local object = {}
+local metatable = {}
+setmetatable(object, metatable)
+
+-- Operador getmetatable(): Obtiene la metatabla de un objeto
+local object = {}
+local metatable = {}
+setmetatable(object, metatable)
+local retrievedMetatable = getmetatable(object)
+
+-- Operadores de SharedTable (Luau)
+-- SharedTable.new(): Crea una nueva SharedTable vacía
+local sharedTable = SharedTable.new()
+
+-- SharedTable.clone(): Crea una copia superficial de una SharedTable
+local original = SharedTable.new()
+original["key"] = "value"
+local clone = SharedTable.clone(original)
+
+-- SharedTable.cloneAndFreeze(): Crea una copia inmutable de una SharedTable
+local original = SharedTable.new()
+original["key"] = "value"
+local clone = SharedTable.cloneAndFreeze(original)
+
+-- SharedTable.clear(): Elimina todos los elementos de una SharedTable
+local sharedTable = SharedTable.new()
+sharedTable["key"] = "value"
+sharedTable:clear()
+
+-- SharedTable.size(): Devuelve la cantidad de elementos en una SharedTable
+local sharedTable = SharedTable.new()
+sharedTable["key1"] = "value1"
+sharedTable["key2"] = "value2"
+local size = sharedTable:size()
+
+-- SharedTable.update(): Actualiza una SharedTable con los elementos de otra tabla
+local sharedTable = SharedTable.new()
+sharedTable:update({key1 = "value1", key2 = "value2"})
+
+-- SharedTable.isFrozen(): Comprueba si una SharedTable es inmutable
+local sharedTable = SharedTable.new()
+sharedTable:setFrozen(true)
+local isFrozen = sharedTable:isFrozen()
+
+-- SharedTable.increment(): Incrementa el valor de un elemento en una SharedTable
+local sharedTable = SharedTable.new()
+sharedTable["counter"] = 0
+sharedTable:increment("counter")
+
+--[[-- OPERADORES DE LUAU --]]--
+
+NOTA = {'Veremos los operadores de'.. Luau ''..'Espero que puedas comprender bien, que son distintos a'.. Lua ..''}
+
+--[[
+Son operadores que no están en Lua, y aunque, realmente pertenecen al lenguaje de Luau exclusivamente
+es bueno el aprender Lua y, seguidamente, intentar mirar el cómo funciona la sintaxis de Luau
+--]]
+
+EJEMPLOS()
+
+--Ejemplo de "Instance.new()"
+
+-- Crea una nueva parte en el juego
+local part = Instance.new("Part")
+part.Size = Vector3.new(10, 5, 3)
+part.BrickColor = BrickColor.new("Bright red")
+part.Position = Vector3.new(0, 10, 0)
+part.Parent = workspace
+
+--Ejemplo de "Rect.new()"
+
+-- Crea un nuevo rectángulo con posición y tamaño específicos
+local rect = Rect.new(0, 0, 100, 200)
+print(rect.X) -- 0
+print(rect.Y) -- 0
+print(rect.Width) -- 100
+print(rect.Height) -- 200
+
+--Ejemplo de "time()"
+
+-- Obtiene el tiempo actual
+local currentTime = time()
+print(currentTime) -- Un número que representa el tiempo actual en segundos
+
+--Ejemplo de "Faces.new()"
+
+-- Crea una estructura de caras para una parte con ciertas caras activas
+local partFaces = Faces.new(true, false, true, false, true, false)
+print(partFaces.Top) -- true
+print(partFaces.Bottom) -- false
+print(partFaces.Left) -- true
+print(partFaces.Right) -- false
+print(partFaces.Front) -- true
+print(partFaces.Back) -- false
+
+--Ejemplo de "newproxy()"
+
+-- Crea un nuevo proxy para un objeto existente
+local proxy = newproxy(true)
+print(proxy) -- Un nuevo objeto proxy
+
+--Ejemplo de: "OverlapParams.new()"
+
+-- Crea un conjunto de parámetros de superposición con ciertos valores
+local overlapParams = OverlapParams.new()
+overlapParams.FilterDescendantsInstances = {workspace.Part1, workspace.Part2, workspace.Part3}
+overlapParams.CollisionGroup = 1
+
+--Ejemplo de: "CatalogSearchParams.new()"
+
+-- Crea un conjunto de parámetros de búsqueda de catálogo con una categoría y término específicos
+local searchParams = CatalogSearchParams.new()
+searchParams.Category = "Hats"
+searchParams.SearchTerm = "Red"
+
+--Ejemplo de: "DockWidgetPluginGuiInfo.new()"
+
+-- Crea una configuración de GUI para un complemento de acoplamiento con ciertas propiedades
+local guiInfo = DockWidgetPluginGuiInfo.new(
+	Enum.InitialDockState.Left,
+	true,
+	false,
+	200,
+	300
+)
+
+--Ejemplo de: "error()"
+
+-- Genera un error con un mensaje personalizado
+-
+ error("Ocurrió un error durante la ejecución del script")
+
+--Ejemplo de: "NumberRange.new()"
+
+-- Crea un rango de números entre 1 y 10
+local range = NumberRange.new(1, 10)
+print(range.Min) -- 1
+print(range.Max) -- 10
+
+--Ejemplo de: "PathWaypoint.new()"
+
+-- Crea un nuevo punto de ruta con una posición y velocidad específicas
+local puntoDeRuta = PathWaypoint.new(Vector3.new(10, 5, 0), 5)
+print(puntoDeRuta.Position) -- Vector3(10, 5, 0)
+print(puntoDeRuta.Speed) -- 5
+
+--Ejemplo de: "PhysicalProperties.new()"
+
+-- Crea nuevas propiedades físicas con una densidad y fricción específicas
+local propiedadesFisicas = PhysicalProperties.new(2, 0.5)
+print(propiedadesFisicas.Density) -- 2
+print(propiedadesFisicas.Friction) -- 0.5
+
+--Ejemplo de: "Axes.new()"
+
+-- Crea un nuevo conjunto de ejes con ejes principales y secundarios específicos
+local ejes = Axes.new(Vector3.new(1, 0, 0), Vector3.new(0, 1, 0))
+print(ejes.PrimaryAxis) -- Vector3(1, 0, 0)
+print(ejes.SecondaryAxis) -- Vector3(0, 1, 0)
+
+--Ejemplo de: "select()"
+
+-- Selecciona y devuelve argumentos específicos de una lista de argumentos
+local argumentos = select(2, "Hola", "mundo", 123, true)
+print(argumentos) -- "mundo", 123, true
+
+--EJEMPLOS DE: "task"
+
+--Ejemplo de: "task.wait()"
+
+-- Espera durante un cierto período de tiempo antes de continuar la ejecución
+print("Inicio de la espera")
+task.wait(5) -- Espera durante 5 segundos
+print("Fin de la espera")
+
+--Ejemplo de: "task.spawn()"
+
+--[[
+En este ejemplo, se crea una nueva tarea que imprime "Inicio de la tarea",
+espera durante 3 segundos y luego imprime "Fin de la tarea".
+Mientras tanto,la tarea principal imprimirá "Tarea principal" sin esperar a que la tarea secundaria termine.
+--]]
+
+-- Crea una nueva tarea y la ejecuta en segundo plano
+local tarea = task.spawn(function()
+	print("Inicio de la tarea")
+	task.wait(3)
+	print("Fin de la tarea")
+end)
+print("Tarea principal")
+
+--Ejemplo de: "task.defer()"
+
+-- Diferir la ejecución de una función hasta el final de la tarea actual
+task.spawn(function()
+	print("Antes de deferir")
+	task.defer(function()
+		print("Dentro del defer")
+	end)
+	print("Después de deferir")
+end)
+
+--Ejemplo de: "task.delay()"
+
+-- Demora la ejecución de una función durante un cierto período de tiempo
+print("Inicio de la demora")
+task.delay(2, function()
+	print("Fin de la demora")
+end)
+print("Tarea principal")
+
+--Ejemplo de: "task.cancel()"
+
+--[[
+En este ejemplo, se crea una tarea que espera durante 5 segundos.
+Después de un retraso de 2 segundos, se cancela la tarea usando task.cancel().
+Como resultado, la tarea se detendrá antes de que se complete y se imprimirá "Tarea cancelada".
+--]]
+
+-- Cancela una tarea específica antes de que se complete
+local tarea = task.spawn(function()
+	print("Inicio de la tarea")
+	task.wait(5)
+	print("Fin de la tarea")
+end)
+
+task.delay(2, function()
+	task.cancel(tarea)
+	print("Tarea cancelada")
+end)
+
+--Ejemplo de: "task.synchronize() y task.desynchronize()"
+
+-- Sincroniza y desincroniza tareas secundarias con la tarea principal
+task.spawn(function()
+	print("Tarea secundaria 1")
+	task.synchronize()
+	print("Tarea secundaria 2")
+	task.desynchronize()
+	print("Tarea secundaria 3")
+end)
+
+print("Tarea principal")
+
+-- Ejemplos de operadores de vectores
+
+-- Operadores_CurveyKey
+
+-- Crea una nueva clave de curva de rotación con tiempo y valor específicos
+local curveKey = RotationCurveKey.new(1, CFrame.new())
+print(curveKey.Time) -- 1
+print(curveKey.Value) -- CFrame
+
+-- Crea una nueva clave de curva flotante con tiempo y valor específicos
+local floatKey = FloatCurveKey.new(2, 3.5)
+print(floatKey.Time) -- 2
+print(floatKey.Value) -- 3.5
+
+-- Vectores_De_Dos_Dimensiones
+
+-- Operadores_Unicos_Dos_Dimensiones
+
+-- Crea un nuevo Vector2int16 con valores x e y específicos
+local vector2int16 = Vector2int16.new(10, 5)
+print(vector2int16.X) -- 10
+print(vector2int16.Y) -- 5
+
+-- Operador_Udim
+
+-- Crea un nuevo UDim2 con valores de escala y desplazamiento específicos
+local udim2 = UDim2.new(0.5, 10, 0.2, -5)
+print(udim2.X.Scale) -- 0.5
+print(udim2.X.Offset) -- 10
+print(udim2.Y.Scale) -- 0.2
+print(udim2.Y.Offset) -- -5
+
+-- Crea un nuevo UDim2 a partir de valores de escala específicos
+local udim2FromScale = UDim2.fromScale(0.8, 0.4)
+print(udim2FromScale.X.Scale) -- 0.8
+print(udim2FromScale.X.Offset) -- 0
+print(udim2FromScale.Y.Scale) -- 0.4
+print(udim2FromScale.Y.Offset) -- 0
+
+-- Crea un nuevo UDim2 a partir de valores de desplazamiento específicos
+local udim2FromOffset = UDim2.fromOffset(50, -20)
+print(udim2FromOffset.X.Scale) -- 0
+print(udim2FromOffset.X.Offset) -- 50
+print(udim2FromOffset.Y.Scale) -- 0
+print(udim2FromOffset.Y.Offset) -- -20
+
+-- Operadores_Generales
+
+-- Crea un nuevo Vector2 con valores x e y específicos
+local vector2 = Vector2.new(3, 7)
+print(vector2.X) -- 3
+print(vector2.Y) -- 7
+
+-- Operadores_De_One
+
+-- Accede a los componentes x, y, magnitud y unidad del Vector2.one
+print(Vector2.one.X) -- 1
+print(Vector2.one.Y) -- 1
+print(Vector2.one.Magnitude) -- 1.4142135623731
+print(Vector2.one.Unit) -- Vector2(0.70710678118655, 0.70710678118655)
+
+-- Operadores_De_Zero
+
+-- Accede a los componentes x, y, magnitud y unidad del Vector2.zero
+print(Vector2.zero.X) -- 0
+print(Vector2.zero.Y) -- 0
+print(Vector2.zero.Magnitude) -- 0
+print(Vector2.zero.Unit) -- Vector2(0, 0)
+
+-- Operador_De_xAxix
+
+-- Accede a los componentes x, y, magnitud y unidad del Vector2.xAxis
+print(Vector2.xAxis.X) -- 1
+print(Vector2.xAxis.Y) -- 0
+print(Vector2.xAxis.Magnitude) -- 1
+print(Vector2.xAxis.Unit) -- Vector2(1, 0)
+
+-- Operador_De_yAxis
+
+-- Accede a los componentes x, y, magnitud y unidad del Vector2.yAxis
+print(Vector2.yAxis.X) -- 0
+print(Vector2.yAxis.Y) -- 1
+print(Vector2.yAxis.Magnitude) -- 1
+print(Vector2.yAxis.Unit) -- Vector2(0, 1)
+
+-- Vectores_De_Tres_Dimensiones
+
+-- Operadores_Unicos_Dos_Dimensiones
+
+-- Crea un nuevo Vector3int16 con valores x, y y z específicos
+local vector3int16 = Vector3int16.new(10, 5, -3)
+print(vector3int16.X) -- 10
+print(vector3int16.Y) -- 5
+print(vector3int16.Z) -- -3
+
+-- Operadores_Generales
+
+-- Crea un nuevo Vector3 con valores x, y y z específicos
+local vector3 = Vector3.new(1, 2, 3)
+print(vector3.X) -- 1
+print(vector3.Y) -- 2
+print(vector3.Z) -- 3
+
+-- Operadores_De_One
+
+-- Accede a los componentes x, y, z, magnitud y unidad del Vector3.one
+print(Vector3.one.X) -- 1
+print(Vector3.one.Y) -- 1
+print(Vector3.one.Z) -- 1
+print(Vector3.one.Magnitude) -- 1.7320508075689
+print(Vector3.one.Unit) -- Vector3(0.57735026918963, 0.57735026918963, 0.57735026918963)
+
+-- Operadores_De_Zero
+
+-- Accede a los componentes x, y, z, magnitud y unidad del Vector3.zero
+print(Vector3.zero.X) -- 0
+print(Vector3.zero.Y) -- 0
+print(Vector3.zero.Z) -- 0
+print(Vector3.zero.Magnitude) -- 0
+print(Vector3.zero.Unit) -- Vector3(0, 0, 0)
+
+-- Operador_De_xAxix
+
+-- Accede a los componentes x, y, z, magnitud y unidad del Vector3.xAxis
+print(Vector3.xAxis.X) -- 1
+print(Vector3.xAxis.Y) -- 0
+print(Vector3.xAxis.Z) -- 0
+print(Vector3.xAxis.Magnitude) -- 1
+print(Vector3.xAxis.Unit) -- Vector3(1, 0, 0)
+
+-- Operador_De_yAxis
+
+-- Accede a los componentes x, y, z, magnitud y unidad del Vector3.yAxis
+print(Vector3.yAxis.X) -- 0
+print(Vector3.yAxis.Y) -- 1
+print(Vector3.yAxis.Z) -- 0
+print(Vector3.yAxis.Magnitude) -- 1
+print(Vector3.yAxis.Unit) -- Vector3(0, 1, 0)
+
+-- Operador_CFrame
+
+-- Crea una nueva CFrame con valores de posición y rotación específicos
+local cframe = CFrame.new(Vector3.new(1, 2, 3), Vector3.new(0, 1, 0))
+print(cframe.Position) -- Vector3(1, 2, 3)
+print(cframe.Rotation) -- Vector3(0, 1, 0)
+
+-- Crea una nueva CFrame a partir de ángulos de rotación específicos
+local cframeAngles = CFrame.Angles(math.pi/2, 0, math.pi)
+print(cframeAngles) -- CFrame
+
+-- Crea una nueva CFrame mirando hacia un punto específico
+local cframeLookAt = CFrame.lookAt(Vector3.new(5, 0, 5), Vector3.new(0, 1, 0))
+print(cframeLookAt) -- CFrame
+
+-- Crea una nueva CFrame de identidad
+local cframeIdentity = CFrame.identity()
+print(cframeIdentity) -- CFrame
+
+-- Crea una nueva CFrame a partir de una matriz de transformación
+local Matrix4 = {
+	nueva_Cordenada = {
+		Vector3.new(x, y, z),
+		Vector3.new(10, 10, 20),
+		Vector3.new(1, 1, 2),
+		Vector3.new(12, 12, 22)
+	}
+}
+
+local cframeFromMatrix = CFrame.fromMatrix(Matrix4.nueva_Cordenada)
+print(cframeFromMatrix) -- CFrame
+
+-- Crea una nueva CFrame a partir de un eje y un ángulo de rotación
+local cframeFromAxisAngle = CFrame.fromAxisAngle(Vector3.new(0, 1, 0), math.pi/4)
+print(cframeFromAxisAngle) -- CFrame
+
+-- Crea una nueva CFrame a partir de ángulos de rotación en los ejes XYZ
+local cframeFromEulerAngles = CFrame.fromEulerAngles(math.pi/2, 0, math.pi)
+print(cframeFromEulerAngles) -- CFrame
+
+-- Crea una nueva CFrame a partir de una orientación específica
+local cframeFromOrientation = CFrame.fromOrientation(math.pi/2, math.pi, 0)
+print(cframeFromOrientation) -- CFrame
+
+-- Crea una nueva CFrame a partir de ángulos de rotación en los ejes XYZ (recomendado)
+local cframeFromEulerAnglesXYZ = CFrame.fromEulerAnglesXYZ(math.pi/2, 0, math.pi)
+print(cframeFromEulerAnglesXYZ) -- CFrame
+
+-- Crea una nueva CFrame a partir de ángulos de rotación en los ejes YXZ
+local cframeFromEulerAnglesYXZ = CFrame.fromEulerAnglesYXZ(math.pi/2, 0, math.pi)
+print(cframeFromEulerAnglesYXZ) -- CFrame
+
+-- Operadores_De_Region_3
+
+-- Crea una nueva Region3 con esquinas específicas
+local region3 = Region3.new(Vector3.new(-10, -5, -2), Vector3.new(10, 5, 2))
+print(region3.Min) -- Vector3(-10, -5, -2)
+print(region3.Max) -- Vector3(10, 5, 2)
+
+-- Crea una nueva Region3int16 con esquinas específicas
+local region3int16 = Region3int16.new(Vector3int16.new(-10, -5, -2), Vector3int16.new(10, 5, 2))
+print(region3int16.Min) -- Vector3int16(-10, -5, -2)
+print(region3int16.Max) -- Vector3int16(10, 5, 2)
+
+--Ejemplos de operadores para colores
+
+-- Operadores_Para_Color
+
+-- Secuencia_De_Color
+
+-- Crea una nueva secuencia de colores con keypoints específicos
+local colorSequence = ColorSequence.new({
+	ColorSequenceKeypoint.new(0, Color3.new(1, 0, 0)),  -- Color rojo al principio (t = 0)
+	ColorSequenceKeypoint.new(0.5, Color3.new(0, 1, 0)),  -- Color verde a la mitad (t = 0.5)
+	ColorSequenceKeypoint.new(1, Color3.new(0, 0, 1))  -- Color azul al final (t = 1)
+})
+print(colorSequence) -- ColorSequence
+
+-- Color_De_Ladrillo
+
+-- Crea un nuevo BrickColor con un valor específico
+local brickColor = BrickColor.new(1001)  -- ID de BrickColor para el color "Bright red"
+print(brickColor) -- BrickColor
+
+-- Crea un BrickColor aleatorio
+local randomBrickColor = BrickColor.Random()
+print(randomBrickColor) -- BrickColor aleatorio
+
+-- Accede a BrickColor específicos (rojo, azul, gris, negro, blanco, verde y amarillo)
+print(BrickColor.Red()) -- BrickColor rojo
+print(BrickColor.Blue()) -- BrickColor azul
+print(BrickColor.Gray()) -- BrickColor gris
+print(BrickColor.Black()) -- BrickColor negro
+print(BrickColor.White()) -- BrickColor blanco
+print(BrickColor.Green()) -- BrickColor verde
+print(BrickColor.Yellow()) -- BrickColor amarillo
+
+-- Accede a una paleta de colores
+print(BrickColor.palette()) -- BrickColor aleatorio de la paleta
+
+-- Accede a BrickColor gris oscuro
+print(BrickColor.DarkGray()) -- BrickColor gris oscuro
+
+-- Color_De_RGB
+
+-- Crea un nuevo Color3 a partir de los valores RGB (rojo, verde y azul) en escala de 0 a 1
+local colorRGB = Color3.fromRGB(255, 0, 0)  -- Rojo brillante
+print(colorRGB) -- Color3
+
+-- Color_De_HSV
+
+-- Crea un nuevo Color3 a partir de los valores HSV (tono, saturación y valor) en escala de 0 a 1
+local colorHSV = Color3.fromHSV(0, 1, 1)  -- Rojo brillante
+print(colorHSV) -- Color3
+
+-- Color_De_HEX
+
+-- Crea un nuevo Color3 a partir de un valor hexadecimal de color
+local colorHex = Color3.fromHex("#FF0000")  -- Rojo brillante
+print(colorHex) -- Color3
+
+-- Operadores_De_Settings
+
+-- Setting_Naturales
+
+-- Accede a las configuraciones de Lua
+local luaSettings = settings().Lua
+print(luaSettings) -- LuaSettings
+
+-- Accede a las configuraciones del juego
+local gameSettings = settings().Game
+print(gameSettings) -- GlobalSettings
+
+-- Accede a las configuraciones del estudio
+local studioSettings = settings().Studio
+print(studioSettings) -- StudioSettings
+
+-- Accede a las configuraciones de la red
+local networkSettings = settings().Network
+print(networkSettings) -- NetworkSettings
+
+-- Accede a las configuraciones de la física
+local physicsSettings = settings().Physics
+print(physicsSettings) -- PhysicsSettings
+
+-- Accede a las configuraciones de renderizado
+local renderingSettings = settings().Rendering
+print(renderingSettings) -- RenderingSettings
+
+-- Accede a las configuraciones de diagnóstico
+local diagnosticsSettings = settings().Diagnostics
+print(diagnosticsSettings) -- DiagnosticsSettings
+
+-- Operadores_Unicos_De_Settings
+
+-- Accede a la configuración de usuario
+local userSettings = UserSettings()
+print(userSettings) -- UserSettings
+
+-- Operadores_Con_Dos_Puntos
+
+-- Encuentra el primer hijo de la pieza que sea una instancia de una clase específica
+local childOfClass = Pieza:FindFirstChildOfClass("Part")
+print(childOfClass) -- Part
+
+-- Encuentra el primer hijo de la pieza con un nombre específico
+local child = Pieza:FindFirstChild("ChildName")
+print(child) -- Instance (ChildName)
+
+-- Espera a que aparezca un hijo de la pieza con un nombre específico
+local childWait = Pieza:WaitForChild("ChildName")
+print(childWait) -- Instance (ChildName)
+
+-- Verifica si la pieza es una instancia de una clase específica
+local isInstanceOf = Pieza:IsA("Part")
+print(isInstanceOf) -- true/false
+
+-- Crea una copia de la pieza
+local clone = Pieza:Clone()
+print(clone) -- Instance (ClonedPieza)
+
+-- Remueve la pieza del juego
+Pieza:Remove()
+
+-- Destruye completamente la pieza
+Pieza:Destroy()
+
+-- Obtiene una lista de los hijos de la pieza
+local children = Pieza:GetChildren()
+print(children) -- {Instance1, Instance2, ...}
+
+-- Obtiene el valor de un atributo específico de la pieza
+local attribute = Pieza:GetAttribute("AttributeName")
+print(attribute) -- AttributeValue
+
+-- Obtiene una señal que se dispara cuando cambia una propiedad de la pieza
+local propertyChangedSignal = Pieza:GetPropertyChangedSignal("PropertyName")
+print(propertyChangedSignal) -- RBXScriptSignal
+
+-- Elimina todos los hijos de la pieza
+Pieza:ClearAllChildren()
+
+-- Encuentra el primer hijo de la pieza que sea una instancia de una clase específica
+local firstChildWhichIsA = Pieza:FindFirstChildWhichIsA("Part")
+print(firstChildWhichIsA) -- Part
+
+-- Verifica si la pieza es una instancia de una clase específica (versión alternativa)
+local isA = Pieza:isA("Part")
+print(isA) -- true/false
+
+-- Agrega una etiqueta a la pieza
+Pieza:AddTag("TagName")
+
+-- Verifica si la pieza tiene una etiqueta específica
+local hasTag = Pieza:HasTag("TagName")
+print(hasTag) -- true/false
+
+-- Cambia el tamaño de la pieza
+Pieza:Resize(Vector3.new(2, 2, 2))
+
+-- Obtiene la masa de la pieza
+local mass = Pieza:GetMass()
+print(mass) -- MassValue
+
+-- Obtiene las etiquetas de la pieza
+local tags = Pieza:GetTags()
+print(tags) -- {"Tag1", "Tag2", ...}
+
+-- Mueve el pivote de la pieza a una posición específica
+Pieza:PivotTo(Vector3.new(5, 0, 0))
+
+-- Obtiene la masa de la pieza (versión alternativa)
+local getMass = Pieza:getMass()
+print(getMass) -- MassValue
+
+-- Obtiene el actor asociado a la pieza
+local actor = Pieza:GetActor()
+print(actor) -- ActorInstance
+
+-- Obtiene el pivote de la pieza
+local pivot = Pieza:GetPivot()
+print(pivot) -- Vector3
+
+-- Obtiene las uniones de la pieza
+local joints = Pieza:GetJoints()
+print(joints) -- {Joint1, Joint2, ...}
+
+-- Elimina una etiqueta de la pieza
+Pieza:RemoveTag("TagName")
+
+-- Verifica si la pieza está en el suelo
+local isGrounded = Pieza:IsGrounded()
+print(isGrounded) -- true/false
+
+-- Realiza una unión asincrónica de la pieza con otras instancias
+local Instance1 = Instance.new("Part", workspace); local Instance2 = Instance.new("Part", workspace)
+Pieza:UnionAsync({Instance1, Instance2, ...})
+
+-- Obtiene el nombre completo de la pieza
+local fullName = Pieza:GetFullName()
+print(fullName) -- "ModelName.PartName"
+
+-- Obtiene la parte raíz de la pieza
+local rootPart = Pieza:GetRootPart()
+print(rootPart) -- RootPartInstance
+
+-- Aplica un impulso a la pieza
+Pieza:ApplyImpulse(Vector3.new(0, 100, 0))
+
+-- Verifica si la pieza es ancestro de otra instancia
+local OtherInstance = game:GetService("Workspace"):FindFirstChildOfClass("Part")
+
+local isAncestorOf = Pieza:IsAncestorOf(OtherInstance)
+print(isAncestorOf) -- true/false
+
+-- Establece un atributo en la pieza con un nombre y valor específicos
+Pieza:SetAttribute("AttributeName", "AttributeValue")
+
+-- Obtiene todos los atributos de la pieza
+local attributes = Pieza:GetAttributes()
+print(attributes) -- {AttributeName1 = AttributeValue1, AttributeName2 = AttributeValue2, ...}
+
+-- Realiza una resta asincrónica de la pieza con otras instancias
+Pieza:SubtractAsync({Instance1, Instance2, ...})
+
+-- Verifica si la pieza puede colisionar con otra instancia
+local canCollideWith = Pieza:CanCollideWith(OtherInstance)
+print(canCollideWith) -- true/false
+
+-- Obtiene todas las instancias descendientes de la pieza
+local descendants = Pieza:GetDescendants()
+print(descendants) -- {Instance1, Instance2, ...}
+
+-- Realiza una intersección asincrónica de la pieza con otras instancias
+Pieza:IntersectAsync({Instance1, Instance2, ...})
+
+-- Verifica si la pieza es descendiente de otra instancia
+local isDescendantOf = Pieza:IsDescendantOf(OtherInstance)
+print(isDescendantOf) -- true/false
+
+-- Obtiene el propietario de red de la pieza
+local networkOwner = Pieza:GetNetworkOwner()
+print(networkOwner) -- PlayerInstance
+
+-- Establece el propietario de red de la pieza
+local PlayerInstance = game:GetService("Players"):FindFirstChild()
+
+Pieza:SetNetworkOwner(PlayerInstance)
+
+-- Obtiene las partes en contacto con la pieza
+local touchingParts = Pieza:GetTouchingParts()
+print(touchingParts) -- {Part1, Part2, ...}
+
+-- Encuentra el primer ancestro de la pieza con un nombre específico
+local firstAncestor = Pieza:FindFirstAncestor("AncestorName")
+print(firstAncestor) -- Instance (AncestorName)
+
+-- Obtiene las partes conectadas a la pieza
+local connectedParts = Pieza:GetConnectedParts()
+print(connectedParts) -- {Part1, Part2, ...}
+
+-- Aplica un impulso angular a la pieza
+Pieza:ApplyAngularImpulse(Vector3.new(0, 0, 100))
+
+-- Encuentra el primer descendiente de la pieza con un nombre específico
+local firstDescendant = Pieza:FindFirstDescendant("DescendantName")
+print(firstDescendant) -- Instance (DescendantName)
+
+-- (Nota: La siguiente función es interna y no está destinada a ser utilizada en scripts normales)
+Pieza:unionAsync2_INTERNAL()
+
+-- Obtiene la velocidad en un punto específico de la pieza
+local velocityAtPosition = Pieza:GetVelocityAtPosition(Vector3.new(0, 0, 0))
+print(velocityAtPosition) -- Vector3
+
+-- Aplica un impulso en una posición específica de la pieza
+Pieza:ApplyImpulseAtPosition(Vector3.new(0, 100, 0), Vector3.new(0, 0, 0))
+
+-- Verifica si se puede establecer la propiedad de propiedad de red de la pieza
+local canSetNetworkOwnership = Pieza:CanSetNetworkOwnership()
+print(canSetNetworkOwnership) -- true/false
+
+-- Obtiene la propiedad de propiedad de red de la pieza automáticamente
+local networkOwnershipAuto = Pieza:GetNetworkOwnershipAuto()
+print(networkOwnershipAuto) -- true/false
+
+-- (Nota: La siguiente función es interna y no está destinada a ser utilizada en scripts normales)
+Pieza:subtractAsync2_INTERNAL()
+
+-- Establece la propiedad de propiedad de red de la pieza automáticamente
+Pieza:SetNetworkOwnershipAuto(true)
+
+-- Encuentra el primer ancestro de la pieza que sea una instancia de una clase específica
+local firstAncestorOfClass = Pieza:FindFirstAncestorOfClass("Model")
+print(firstAncestorOfClass) -- Model
+
+-- Obtiene el punto más cercano en la superficie de la pieza a un punto específico
+local closestPoint = Pieza:GetClosestPointOnSurface(Vector3.new(1, 2, 3))
+print(closestPoint) -- Vector3
+
+-- Encuentra el primer ancestro de la pieza que sea una instancia de una clase específica
+local firstAncestorWhichIsA = Pieza:FindFirstAncestorWhichIsA("Folder")
+print(firstAncestorWhichIsA) -- Folder
+
+-- Obtiene una señal que se dispara cuando cambia un atributo de la pieza
+local attributeChangedSignal = Pieza:GetAttributeChangedSignal("AttributeName")
+print(attributeChangedSignal) -- RBXScriptSignal
+
+--[[Ejemplos de "Enum" (solo los más usados y los más útiles)
+Recomiendo que visites la página ofcial: "https://create.roblox.com/docs/reference/engine/enums" para más información
+--]]
+
+-- Operador_CameraType
+local camera = game.Workspace.CurrentCamera
+camera.CameraType = Enum.CameraType.Track -- Configura la cámara para seguir a un objeto en movimiento
+
+-- Operador_EasingStyle
+local part = game.Workspace.Part
+part.Position = Vector3.new(0, 0, 0)
+part:TweenPosition(Vector3.new(10, 0, 0), Enum.EasingStyle.Quad, Enum.EasingDirection.Out, 5, true)
+-- Interpola la posición del objeto desde (0, 0, 0) hasta (10, 0, 0) en 5 segundos utilizando una función de interpolación cuadrática
+
+-- Operador_Font
+local textLabel = Instance.new("TextLabel")
+textLabel.Text = "Hello, world!"
+textLabel.Font = Enum.Font.Arial -- Establece la fuente del texto como Arial
+
+-- Operador_Keycode
+game:GetService("UserInputService").InputBegan:Connect(function(input)
+	if input.KeyCode == Enum.KeyCode.Space then
+		print("¡Espacio presionado!")
+	elseif input.KeyCode == Enum.KeyCode.E then
+		print("¡Tecla E presionada!")
+	end
+end)
+-- Escucha los eventos de entrada y muestra un mensaje cuando se presiona la tecla Espacio o la tecla E
+
+NOTA = {'Los operadores relacionados con UTF-8 en Lua se encuentran en la biblioteca estándar utf8.',
+'Aquí tienes ejemplos de cómo usar algunos de estos operadores:'
+}
+
+-- Operador utf8.len()
+local str = "¡Hola, mundo!"
+local len = utf8.len(str)
+print(len) -- Imprime 13, que es la longitud de la cadena en caracteres UTF-8
+
+-- Operador utf8.offset()
+local str = "你好，世界！"
+local offset = utf8.offset(str, 4)
+print(offset) -- Imprime 6, que es la posición de inicio del cuarto carácter UTF-8 en la cadena
+
+-- Operador utf8.codepoint()
+local str = "🌟✨"
+local codepoint1, codepoint2 = utf8.codepoint(str, 1, 2)
+print(codepoint1, codepoint2) -- Imprime 127775 10024, que son los puntos de código UTF-8 de los dos primeros caracteres en la cadena
+
+-- Operador utf8.char()
+local codepoints = {104, 101, 108, 108, 111}
+local str = utf8.char(unpack(codepoints))
+print(str) -- Imprime "hello", que es la cadena formada por los puntos de código UTF-8 dados
+
+-- Operador utf8.codes()
+local str = "Привет, мир!"
+for codepoint in utf8.codes(str) do
+	print(codepoint) -- Imprime los puntos de código UTF-8 de cada carácter en la cadena
+end
+
+-- Operador utf8.graphemes()
+local str = "👩‍👩‍👧‍👦"
+for _, grapheme in ipairs(utf8.graphemes(str)) do
+	print(grapheme) -- Imprime cada grafema (secuencia de puntos de código) en la cadena
+end
+
+-- Operador utf8.charpattern
+local str = "abc123"
+local pattern = utf8.charpattern
+local matches = {}
+for match in str:gmatch(pattern) do
+	table.insert(matches, match) -- Encuentra y almacena todos los caracteres UTF-8 en la cadena
+end
+
+-- Operador utf8.nfcnormalize()
+local str = "café"
+local normalized = utf8.nfcnormalize(str)
+print(normalized) -- Imprime "café", que es la forma normalizada del texto según la forma de composición canónica
+
+-- Operador utf8.nfdnormalize()
+local str = "café"
+local normalized = utf8.nfdnormalize(str)
+print(normalized) -- Imprime "café", que es la forma normalizada del texto según la forma de descomposición canónica
+
+--Ejemplos de Bit32
+
+--[[
+Aquí tienes ejemplos de cómo utilizar los operadores de bit en Lua con la biblioteca bit32. 
+Recuerda que estos operadores trabajan con valores enteros de 32 bits.
+--]]
+
+-- Operador bit32.bor()
+local a = 5  -- Representación binaria: 00000000000000000000000000000101
+local b = 3  -- Representación binaria: 00000000000000000000000000000011
+local result = bit32.bor(a, b)
+print(result)  -- Imprime 7, que es el resultado de realizar la operación OR a nivel de bits entre a y b
+
+-- Operador bit32.band()
+local a = 5  -- Representación binaria: 00000000000000000000000000000101
+local b = 3  -- Representación binaria: 00000000000000000000000000000011
+local result = bit32.band(a, b)
+print(result)  -- Imprime 1, que es el resultado de realizar la operación AND a nivel de bits entre a y b
+
+-- Operador bit32.bnot()
+local a = 5  -- Representación binaria: 00000000000000000000000000000101
+local result = bit32.bnot(a)
+print(result)  -- Imprime -6, que es el resultado de realizar la operación NOT a nivel de bits sobre a (complemento a dos)
+
+-- Operador bit32.bxor()
+local a = 5  -- Representación binaria: 00000000000000000000000000000101
+local b = 3  -- Representación binaria: 00000000000000000000000000000011
+local result = bit32.bxor(a, b)
+print(result)  -- Imprime 6, que es el resultado de realizar la operación XOR a nivel de bits entre a y b
+
+-- Operador bit32.lshift()
+local a = 5  -- Representación binaria: 00000000000000000000000000000101
+local shiftAmount = 2
+local result = bit32.lshift(a, shiftAmount)
+print(result)  -- Imprime 20, que es el resultado de desplazar a hacia la izquierda 2 bits
+
+-- Operador bit32.rshift()
+local a = 5  -- Representación binaria: 00000000000000000000000000000101
+local shiftAmount = 2
+local result = bit32.rshift(a, shiftAmount)
+print(result)  -- Imprime 1, que es el resultado de desplazar a hacia la derecha 2 bits (desplazamiento lógico)
+
+-- Operador bit32.arshift()
+local a = -5  -- Representación binaria: 11111111111111111111111111111011
+local shiftAmount = 2
+local result = bit32.arshift(a, shiftAmount)
+print(result)  -- Imprime -2, que es el resultado de desplazar a hacia la derecha 2 bits (desplazamiento aritmético)
+
+-- Operador bit32.countlz()
+local a = 5  -- Representación binaria: 00000000000000000000000000000101
+local result = bit32.countlz(a)
+print(result)  -- Imprime 27, que es la cantidad de ceros iniciales a la izquierda en la representación binaria de a
+
+-- Operador bit32.countrz()
+local a = 5  -- Representación binaria: 00000000000000000000000000000101
+local result = bit32.countrz(a)
+print(result)  -- Imprime 0, que es la cantidad de ceros finales a la derecha en la representación binaria de a
+
+-- Operador bit32.extract()
+local a = 170  -- Representación binaria: 00000000000000000000000010101010
+local fieldWidth = 4
+local fieldOffset = 8
+local result = bit32.extract(a, fieldWidth, fieldOffset)
+print(result)  -- Imprime 10, que es el campo extraído desde la posición 8 con una anchura de 4 bits
+
+-- Operador bit32.lrotate()
+local a = 5  -- Representación binaria: 00000000000000000000000000000101
+local rotateAmount = 2
+local result = bit32.lrotate(a, rotateAmount)
+print(result)  -- Imprime 20, que es el resultado de rotar a hacia la izquierda 2 bits
+
+-- Operador bit32.replace()
+local a = 170  -- Representación binaria: 00000000000000000000000010101010
+local b = 7    -- Representación binaria: 00000000000000000000000000000111
+local fieldWidth = 3
+local fieldOffset = 8
+local result = bit32.replace(a, b, fieldWidth, fieldOffset)
+print(result)  -- Imprime 154, que es el resultado de reemplazar el campo en la posición 8 de a con los 3 bits menos significativos de b
+
+-- Operador bit32.rrotate()
+local a = 5  -- Representación binaria: 00000000000000000000000000000101
+local rotateAmount = 2
+local result = bit32.rrotate(a, rotateAmount)
+print(result)  -- Imprime 1, que es el resultado de rotar a hacia la derecha 2 bits
+
+-- Operador bit32.btest()
+local a = 5  -- Representación binaria: 00000000000000000000000000000101
+local b = 3  -- Representación binaria: 00000000000000000000000000000011
+local result = bit32.btest(a, b)
+print(result)  -- Imprime true, ya que hay al menos un bit en común a 1 entre a y b
+
+--[[
+Los operadores setfenv() y getfenv() se utilizan para establecer y obtener el entorno de ejecución
+de una función en Lua. A continuación, te muestro ejemplos de cómo utilizar estos operadores:
+--]]
+
+-- Ejemplo de setfenv()
+local function miFuncion()
+	print("Hello, world!")
+end
+
+local env = {}
+
+myVariable = 42
+
+table.insert(env, myVariable)
+
+setfenv(miFuncion, env)  -- Establece el entorno de ejecución de myFunction como env
+
+miFuncion()  -- Imprime "Hello, world!"
+print(myVariable)  -- Imprime 42, ya que myVariable está definida en el entorno de ejecución de myFunction
+
+-- Ejemplo de getfenv()
+local function mi_Function()
+	print("Hello, world!")
+end
+
+local env = { myVariable = 42 }
+setfenv(mi_Function, env)  -- Establece el entorno de ejecución de myFunction como env
+
+local currentEnv = getfenv(mi_Function)  -- Obtiene el entorno de ejecución de myFunction
+print(currentEnv.myVariable)  -- Imprime 42, ya que myVariable está definida en el entorno de ejecución de myFunction
+
+NOTA = {'En el primer ejemplo, utilizamos setfenv() para establecer el entorno de ejecución de myFunction',
+'como env, que es una tabla que contiene una variable llamada myVariable.',
+'Dentro de myFunction, podemos acceder y utilizar myVariable porque está definida',
+	'en el entorno de ejecución de la función',
+	--
+	'En el segundo ejemplo, utilizamos getfenv() para obtener el entorno de ejecución actual de myFunction.',
+	'Luego, accedemos a la variable myVariable en ese entorno y la imprimimos'
+}
+
+-- Ejemplo de operadores de DateTime en Luau (Roblox)
+
+-- Obtener la fecha y hora actual
+local now = DateTime.now()
+print("Fecha y hora actual:", now)
+
+-- Crear un DateTime a partir de una fecha y hora local específica
+local localTime = DateTime.fromLocalTime(2023, 5, 16, 10, 30, 0)
+print("Fecha y hora local:", localTime)
+
+-- Crear un DateTime a partir de una fecha y hora en tiempo universal
+local universalTime = DateTime.fromUniversalTime(2023, 5, 16, 10, 30, 0)
+print("Fecha y hora universal:", universalTime)
+
+-- Crear un DateTime a partir de un timestamp Unix
+local unixTimestamp = DateTime.fromUnixTimestamp(1621134000)
+print("Fecha y hora desde un timestamp Unix:", unixTimestamp)
+
+-- Crear un DateTime a partir de un timestamp Unix en milisegundos
+local unixTimestampMillis = DateTime.fromUnixTimestampMillis(1621134000000)
+print("Fecha y hora desde un timestamp Unix en milisegundos:", unixTimestampMillis)
+
+-- Crear un DateTime a partir de una cadena de fecha en formato ISO 8601
+local isoDate = DateTime.fromIsoDate("2023-05-16T10:30:00Z")
+print("Fecha y hora desde una cadena en formato ISO 8601:", isoDate)
+
+
+
+--------------------------------------------------------------------------------------------------------
+SISTEMAS_BASICOS()
+
+Descripcion = {
+'Te mostraremos algunas funciones que puedes hacer en tus juegos por tu propia cuenta, con explicación'
+}
+--------------------------------------------------------------------------------------------------------
+Crear_Dinero_Para_Mi_Juego()
+
+Descripcion = {
+	
+'Necesitamos saber como funciona el crear y instruir una instancia para "X" partido-tarea.',
+'Una instancia puede ser un folder, un valor, un bloque, un modelo etc, conocerlos es de gran ayuda.',
+'Crearemos un folder adentro del jugador que entre al juego, y dentro de ese folder un valor',
+'el folder se llamará: "leaderstats", el tipo de valor sera "IntValue", el nombre puede ser: "Dinero"',
+'NOTA: Importante crear todo esto desde un Script; de ningúna manera en un LocalScript ya que solo afectará al player',
+	
+	Codigos_Que_Usaremos = "game:GetService(), Instance.new()",
+	
+	Eventos_Que_Detectaremos = "Players.PlayerAdded",
+	
+	Parametros_Requeridos = "player"
+}
+PROCESO()
+
+local Players = game:GetService("Players")
+
+Players.PlayerAdded:Connect(function(player) --Lleva como parámetro: "player", es decir, al momento de que un jugador entra a tu juego, el parámetro viene a significar quien lo hizo, por ejemplo más abajo "player.Name" viene a ser el nombre del jugador que se ha unido
+	local leaderstats = Instance.new("Folder")
+	leaderstats.Parent = player
+	
+	local divisa = Instance.new("IntValue")
+	divisa.Name = "Dinero"
+	divisa.Parent = leaderstats
+	--Si quieres que los jugadores comiencen con X cantidad de dinero haces además de lo de arriba, lo siguiente:
+	divisa.Value = divisa.Value +100
+end)
+--------------------------------------------------------------------------------------------------------
+CARGAR_UN_PERSONAJE()
+
+Descripcion = {
+'¿Algúna vez has querido cargar un personaje, por ejemplo, del jugador con más Dinero, o de un amigo? Te digo como.',
+'Primero, te adelanto que si quieres poner un personaje con el avatar que tenga, puedes usar un Plugin.',
+'Si lo que te interesa es que el personaje sea el que la persona tiene, o tú mismo tienes y se actualice cada que cambie de ropa, entonces has lo siguiente que te enseñaré:',
+'Puedes crear un Script, y ponerlo dentro de un "Dummy" y hacerlo de la forma siguiente',
+	
+	Codigos_Que_Usaremos = "game:GetService(), ApplyDescription(), GetHumanoidDescriptionFromUserId()",
+	
+	Informacion_Necesaria = {player.UserId, 'Ya sea obteniendo el "UserId" por tus propios métodos; o copiando el Id ya sea tuyo o de tu amigo. Lo puedes encontrar en la URL de tu-su perfil. "EJEMPLO: roblox.com/users/464620732 - mi UserId es: 464620732"'},
+	
+	Instancias_Requeridas = {"Un Dummy; o algún Rig", 'Puedes crear un Dummy con el Plugin de creación de Rig por defecto de Roblox que nos los dan a todos gratuitamente; o puedes hacer uno con Scripts; pero es más complicado'}
+}
+PROCESO()
+
+local Players = game:GetService("Players")
+
+local Modelo = script.Parent
+local Humanoid = Modelo:FindFirstChildOfClass("Humanoid") repeat wait() until Humanoid ~= nil --El repeat está de sobra; pero significa, que repita esta variable las veces que sean necesarias si el Humanoid no existe, ayuda a que cargue si hay lag
+
+if Humanoid ~= nil and Model ~= nil then --Ésta línea de código sinifica, que cuando el Humanoid sea diferente de la inexistencia, y el Modelo tambi
+	Humanoid:ApplyDescription(Players:GetHumanoidDescriptionFromUserId(464620732)) --Sobre Humanoid, aplicamos una descripción de características, luego, el otro código dentro de Apply, es que, desde el servicio de Players, obtenemos ésa descripción desde un UserId, dentro de éste código va el UserId
+end
+
+SEGUNDO_METODO()
+--Poner el personaje de alguien que se acaba de unir
+local Players = game:GetService("Players")
+
+Players.PlayerAdded:Connect(function(player)
+	local UserId = player.UserId
+	player.CharacterAdded:Connect(function(Character)
+		local Humanoid = Character:FindFirstChildOfClass("Humanoid")
+		
+		Character.ChildAdded:Connect(function() --Aquí decimos, cuando todo el contenido del personaje halla cargado, sucederá lo de abajo
+			Humanoid:ApplyDescription(Players:GetHumanoidDescriptionFromUserId(UserId)) --Colocamos el UserId de la persona que se ha unido al servidor
+		end)
+	end)
+end)
+--------------------------------------------------------------------------------------------------------
+GUARDAR_CUALQUIER_DATO_DE_TU_JUEGO__USO_DE_DATASTORESERVICE()
+
+Descripcion = {
+'Puedes ser un gran creador de juegos si sabes manejar el "DataStoreService", puedes guardar prácticamente cualquier valor en tu juego',
+'Te enseñaremos como guardar "Dinero" para éste ejemplo',
+	
+	Codigos_Que_Usaremos = 'game:GetService(), GetDataStore(), GetAsync(), SetAsync(), condicional: "if", pcall(function(), bucle: "for", GetPlayers()',
+	
+	Eventos_Que_Detectaremos = "Players.PlayerAdded, Players.PlayerRemoving, game:BindToClose()",
+
+	Parametros_Requeridos = "player"
+}
+
+NOTA = {"Puedes guardar la información desde un Módulo o como gustes",
+"pero te enseñaremos a guardar 'Dinero' desde una misma hoja de código."
+}
+
+PROCESO()
+
+local Players = game:GetService("Players")
+local DataStore = game:GetService("DataStoreService")
+local DatosJugador = DataStore:GetDataStore("DatosJugador") --Puedes llamarle a la variable y a tu DataStore como tu quieras
+
+Players.PlayerAdded:Connect(function(player)
+	local leaderstats = Instance.new("Folder", player)
+
+	local divisa = Instance.new("IntValue", leaderstats)
+	divisa.Name = "Dinero"
+	
+	local datosGuardados_Dinero
+	pcall(function()
+		datosGuardados_Dinero = DatosJugador:GetAsync(player.UserId.."%Dinero%") --Puedes concatenarlo como quieras, mientras no se valla a confundir con el UserId esta bien, puedes poner un simbolo o un guión, como .."-Dinero") por ejemplo.
+	end)
+	
+	if datosGuardados_Dinero ~= nil then --Si los datos sobre su dinero existen, entonces sucede lo de abajo
+		divisa.Value = datosGuardados_Dinero
+	end
+end)
+
+Players.PlayerRemoving:Connect(function(player) --Al igual que cuando alguien se une podemos saber quien ha sido, también cuando alguien se desconecta del servidor, podemos saber quien ha sido con el parámetro de "player"
+	pcall(function()
+		local Dinero = player.leaderstats.Dinero
+		DatosJugador:SetAsync(player.UserId.."%Dinero%", Dinero.Value) --Con SetAsync() logramos actualizar y guardar la información sobre un jugador junto con "X" valor, en este caso, su dinero
+	end)
+end)
+
+game:BindToClose(function() --Éste evento sucede cuando se caen los servidores de Roblox, se va el internet, el creador cierra los servidores, se acaba el servicio de Servidor Privado etc
+	for i, player in pairs(game:GetService("Players"):GetPlayers()) do
+		pcall(function()
+			local Dinero = player.leaderstats.Dinero
+			DatosJugador:SetAsync(player.UserId.."%Dinero%", Dinero.Value)
+		end)
+	end
+end)
+--------------------------------------------------------------------------------------------------------
+CREAR_UN_PUNTO_DE_GUARDADO()
+
+Descripcion = {
+'Puedes crear diferentes puntos de guardado para tus juegos, así será más divertido para todos',
+'Te enseñaremos como crear un punto de guardado (no necesariamente en un Spawn)',
+
+	Codigos_Que_Usaremos = 'Players.GetPlayerFromCharacter()',
+
+	Eventos_Que_Detectaremos = "part.Touched, player.CharacterAdded()",
+
+	Parametros_Requeridos = "hit"
+}
+
+NOTA = {'Puedes poner un script en cualquier part; puedes almacenar la función en un módulo si quieres'}
+
+PROCESO()
+
+local Players = game:GetService("Players")
+local ServerStorage = game:GetService("ServerStorage")
+
+local partPuntoDeControl = script.Parent -- Especificamos la parte que será nuestro punto de control
+
+partPuntoDeControl.Touched:Connect(function(hit)
+	-- Creamos una función para el evento que se detectará cuando el jugador toque el punto
+	if hit and hit.Parent and hit.Parent:FindFirstChild("Humanoid") and Players:FindFirstChild(hit.Parent.Name) then
+		-- Nos aseguramos de que sea un jugador y no un NPC o cualquier bloque del mapa
+
+		local player = Players:GetPlayerFromCharacter(hit.Parent) -- Obtenemos el jugador
+		local puntoDeControl = ServerStorage:FindFirstChild("puntoDeControl") -- Buscamos el valor de un punto de control en ServerStorage
+
+		if not puntoDeControl then
+			-- Si el valor que buscamos recientemente no existe, crearemos uno
+			puntoDeControl = Instance.new("Model", ServerStorage) -- El valor será un modelo dentro de ServerStorage
+			puntoDeControl.Name = "puntoDeControl" -- Colocamos el nombre del punto de control
+		end
+
+		local puntoGuardado = puntoDeControl:FindFirstChild(tostring(player.UserId)) -- Buscamos nuestro punto de control
+
+		if not puntoGuardado then
+			-- Si no hay un punto guardado de nuestro jugador (con nuestro UserId), lo crearemos
+			puntoGuardado = Instance.new("ObjectValue", puntoDeControl) -- Creamos el valor con nuestro UserId dentro del punto de guardado (Model) para identificarnos
+			puntoGuardado.Name = tostring(player.UserId) -- Ponemos nuestro Id
+
+			player.CharacterAdded:Connect(function(Character)
+				-- Detectamos cuando nuestro personaje cargue de nuevo (Si murió o reinició el personaje se dispara el evento CharacterAdded())
+				wait()
+				Character:WaitForChild("HumanoidRootPart").CFrame = ServerStorage.puntoDeControl[tostring(player.UserId)].Value.CFrame + Vector3.new(0, 4, 0)
+				-- Lo ubicamos en el CFrame del punto de control que guardamos
+			end)
+		end
+
+		puntoGuardado.Value = partPuntoDeControl -- Al ObjectValue le asignamos como información el propio puntoDeControl (la parte o bloque)
+	end
+end)
+--------------------------------------------------------------------------------------------------------
+DETECTAR_COLISION_ENTRE_DOS_PARTS()
+
+Descripcion = {
+'Podemos detectar si dos partes están colisionando, creamos un Script en" ServerScriptService"',
+	
+	Codigos_Que_Usaremos = 'print(), game:GetService(), condicional: "if"',
+	
+	Eventos_Que_Detectaremos = 'game:GetService("Workspace").CollisionEnter',
+	
+	Parametros_Requeridos = 'Dos parámetros sin un nombre fijo; por practicidad, sugiero: "partA" y "partB"'	
+}
+
+NOTA = {'Este script utiliza el evento CollisionEnter del servicio Workspace',
+'para detectar cuando ocurre una colisión entre dos partes.',
+'Al producirse una colisión, se llama a la función manejarColision que imprime un mensaje en la consola',
+'junto con el nombre de las partes que colisionaron'
+}
+
+PROCESO()
+
+-- Script para detectar colisiones entre partes en Roblox Studio
+
+-- Configuración
+local mensajeColision = "¡Colisión detectada!" -- Mensaje que se mostrará cuando ocurra una colisión
+
+-- Función para manejar las colisiones
+local function manejarColision(partA, partB)
+	print(mensajeColision)
+	print("Parte A:", partA.Name)
+	print("Parte B:", partB.Name)
+end
+
+-- Evento de colisión
+game:GetService("Workspace").CollisionEnter:Connect(function(partA, partB)
+	-- Verificar que las partes tengan un objeto raíz
+	if partA:FindFirstAncestor("Model") and partB:FindFirstAncestor("Model") then
+		-- Llamar a la función de manejo de colisiones
+		manejarColision(partA, partB)
+	end
+end)
+--------------------------------------------------------------------------------------------------------
+CREAR_PARTICULAS_AL_SALTAR()
+
+Descripcion = {'Este script crea un efecto visual de partículas alrededor de un jugador cuando este salta',
+	Codigos_Que_Usaremos = 'Instance.new(), NumberRange.new(), Vector3.new(), ColorSequence.new(), Destroy(), WaitForChild(), game:GetService()',
+	
+	Eventos_Que_Detectaremos = 'game:GetService("Players").PlayerAdded, player.CharacterAdded, humanoid.Jumping',
+	
+	Parametros_Requeridos = 'HumanoidRootPart.Position, player, character'
+}
+
+NOTA = {'Este script utiliza un ParticleEmitter para crear un efecto de partículas alrededor del jugador cuando salta.',
+'Al saltar, se llama a la función crearParticulas que crea y configura un ParticleEmitter en la posición del jugador.',
+'Las partículas se dispersan en todas las direcciones y caen hacia abajo debido a la gravedad simulada.'
+}
+
+--[[
+Además, puedes cambiar la textura de las partículas utilizando el ID de textura adecuado.
+Asegúrate de agregar una textura en Roblox Studio y obtener su ID para reemplazar "rbxassetid://291319358" en el script
+--]]
+
+PROCESO()
+
+-- Script para crear un efecto de partículas al saltar en Roblox Studio
+
+-- Configuración
+local cantidadParticulas = 50 -- Cantidad de partículas que se crearán al saltar
+local colorParticulas = Color3.new(1, 0, 0) -- Color de las partículas (rojo en este ejemplo)
+local tamanoParticulas = Vector3.new(0.2, 0.2, 0.2) -- Tamaño de las partículas
+
+-- Función para crear las partículas
+local function crearParticulas(position)
+	local particulas = Instance.new("ParticleEmitter")
+	particulas.Parent = workspace
+	particulas.Position = position
+	particulas.Lifetime = NumberRange.new(1, 2)
+	particulas.Rate = 0
+	particulas.VelocitySpread = 360
+	particulas.Texture = "rbxassetid://291319358" -- ID de textura de particulas
+	particulas.Size = tamanoParticulas
+	particulas.Acceleration = Vector3.new(0, -30, 0)
+	particulas.Color = ColorSequence.new(colorParticulas)
+	particulas.Transparency = NumberSequence.new(0, 1)
+	particulas.LockedToPart = true
+	particulas.EmissionDirection = Enum.NormalId.Top
+	particulas.Enabled = true
+
+	wait(1)
+	particulas.Enabled = false
+	wait(5)
+	particulas:Destroy()
+end
+
+-- Evento de salto
+game:GetService("Players").PlayerAdded:Connect(function(player)
+	player.CharacterAdded:Connect(function(character)
+		local humanoid = character:WaitForChild("Humanoid")
+
+		humanoid.Jumping:Connect(function()
+			crearParticulas(character.HumanoidRootPart.Position)
+		end)
+	end)
+end)
+--------------------------------------------------------------------------------------------------------
+CREAR_PUNTO_DE_CONTROL()
+
+Descripcion = {'Aquí tienes un ejemplo de cómo puedes crear un punto de checkpoint en un juego de Roblox Studio',
+'Para crear un punto de checkpoint, necesitarás seguir estos pasos',
+	
+	Codigos_Que_Usaremos = 'condicional: "if", IsA(), FindFirstChildOfClass(), GetPlayerFromCharacter(), Destroy(), Clone(), SetPrimaryPartCFrame(), Instance.new()',
+	
+	Eventos_Que_Detectaremos = 'touchDetector.Touched',
+	
+	Parametros_Requeridos = 'hit'	
+}
+
+NOTA = {'En Roblox Studio, crea un modelo que represente el punto de checkpoint. Puedes agregar partes y decoraciones según tus preferencias.',
+'Asegúrate de que el modelo esté en ServerStorage y tenga un PrimaryPart establecido correctamente.',
+'Crea un nuevo Script en ServerScriptService y coloca el código anterior en él.',
+'En el código, ajusta la configuración según tus necesidades.',
+'Por ejemplo, cambia el nombre del modelo de punto de checkpoint en la línea',
+--local puntoDeControlModel = ServerStorage:FindFirstChild("PuntoDeControlModel")
+'para que coincida con el nombre del modelo que creaste.',
+'Define la posición de respawn del jugador en el punto de checkpoint ajustando el valor de puntoDeControlRespawnPosition',
+'a las coordenadas deseadas.',
+'Ejecuta el script y verás que se crea un punto de checkpoint en la posición del script en el juego.',
+'Cuando un jugador toque el punto de checkpoint, su posición de respawn se establecerá y el punto de checkpoint se eliminará.'
+}
+
+--[[
+Recuerda personalizar el modelo de punto de checkpoint y su apariencia para que se ajuste a tu juego.
+Puedes agregar efectos visuales adicionales o cualquier otra funcionalidad según tus necesidades.
+--]]
+
+PROCESO()
+
+-- Script para crear un punto de checkpoint en Roblox Studio
+
+-- Configuración
+local ServerStorage = game:GetService("ServerStorage")
+local puntoDeControlModel = ServerStorage:FindFirstChild("PuntoDeControlModel") -- Modelo del punto de checkpoint en ServerStorage
+local puntoDeControlRespawnPosition = Vector3.new(0, 5, 0) -- Posición de respawn del jugador en el punto de checkpoint
+
+-- Evento de toque en el punto de checkpoint
+local function onTouched(hit)
+	if hit.Parent and hit.Parent:IsA("Model") and hit.Parent:FindFirstChildOfClass("Humanoid") then
+		local player = game.Players:GetPlayerFromCharacter(hit.Parent)
+		if player then
+			-- Establecer la posición de respawn del jugador
+			player.RespawnLocation = puntoDeControlRespawnPosition
+
+			-- Eliminar el punto de checkpoint después de ser tocado
+			script.Parent:Destroy()
+		end
+	end
+end
+
+-- Verificar si el modelo del punto de checkpoint existe
+if puntoDeControlModel then
+	-- Clonar el modelo del punto de checkpoint en la posición deseada
+	local puntoDeControl = puntoDeControlModel:Clone()
+	puntoDeControl.Parent = workspace
+	puntoDeControl:SetPrimaryPartCFrame(script.Parent.CFrame) -- Posicionar el punto de checkpoint en el lugar del script
+
+	-- Agregar un detector de toque al punto de checkpoint
+	local touchDetector = Instance.new("TouchTransmitter")
+	touchDetector.TransmitterTarget = puntoDeControl.PrimaryPart
+	touchDetector.Parent = puntoDeControl
+
+	-- Conectar el evento de toque
+	touchDetector.Touched:Connect(onTouched)
+end
+--------------------------------------------------------------------------------------------------------
+Tags_Y_Variables_Para_Este_Escrito = {}
+
+function TEMAS()
+end
+function SISTEMAS_BASICOS()
+end
+function EJEMPLOS()
+end
+function Crear_Dinero_Para_Mi_Juego()
+end
+function PROCESO()
+end
+function CARGAR_UN_PERSONAJE()
+end
+function SEGUNDO_METODO()
+end
+function GUARDAR_CUALQUIER_DATO_DE_TU_JUEGO__USO_DE_DATASTORESERVICE()
+end
+function CREAR_UN_PUNTO_DE_GUARDADO()
+end
+function Luau()
+end
+function Lua()
+end
+function DETECTAR_COLISION_ENTRE_DOS_PARTS()
+end
+function CREAR_PARTICULAS_AL_SALTAR()
+end
+function CREAR_PUNTO_DE_CONTROL()
+end
