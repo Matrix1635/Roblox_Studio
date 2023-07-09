@@ -1,8 +1,8 @@
                                                  LUA_BASICS =
                                                 
 
-	            {"Bienvenido a LUA BASICS, aquí aprenderás sobre el uso correcto del lenguaje",
-		            "Además, de como llevar a cabo las tareas que necesites para tu juego"} --Matrix1635
+	            {[[Bienvenido a LUA BASICS, aquí aprenderás sobre el uso correcto del lenguaje
+		            Además, de como llevar a cabo las tareas que necesites para tu juego]]} --Matrix1635
 --------------------------------------------------------------------------------------------------------
 
 NOTA = {
@@ -35,13 +35,17 @@ Tabla_De_Contenidos = {
 	-Tema_3 == "CARÁCTERES EN INGLÉS"
 	),
 	SISTEMAS_BASICOS(
-			Crear_Dinero_Para_Mi_Juego,
+			CREAR_DINERO_PARA_MI_JUEGO,
 			CARGAR_UN_PERSONAJE,
 			GUARDAR_CUALQUIER_DATO_DE_TU_JUEGO__USO_DE_DATASTORESERVICE,
 			CREAR_UN_PUNTO_DE_GUARDADO,
 			DETECTAR_COLISION_ENTRE_DOS_PARTS,
 			CREAR_PARTICULAS_AL_SALTAR,
-			CREAR_PUNTO_DE_CONTROL
+			CREAR_PUNTO_DE_CONTROL,
+			DAR_EMBLEMA_A_UN_JUGADOR,
+			COLOCAR_UN_TAG_AL_NOMBRE_EN_CHAT,
+			DETECTAR_SI_UN_JUGADOR_ESTA_EN_UN_GRUPO,
+			NO_COLISIONAR_ENTRE_JUGADORES
 	)},
 	Creditos = {
 		
@@ -64,10 +68,16 @@ Tabla_De_Contenidos = {
 Tema_1 = "CONOCER LAS VARIABLES" -- Crear VARIABLES
 
 Descripcion = {
-"¿Qué es una variable? Las variables son palabras o símbolos que dan significado a cualquier cosa que desees.",
-"Las variables no pueden contener espacios y siempre deben ser secuencias o conjuntos de caracteres, como 'MapaDelMundo', 'NombreDelJugador', 'Jugador_1'.",
-"Puedes crear una variable que represente un número, una cadena de texto, una ruta ['ruta de un objeto y/o instancia'], una tabla '{}', una operación matemática o valores booleanos como 'true' (verdadero) o 'false' .",
-"Para crear una variable que se pueda utilizar dentro de un script, debes declararla primero con el prefijo 'local', lo que indica que es una variable local disponible solo en el script en el que se declara."
+[[¿Qué es una variable? Las variables son palabras o símbolos que dan significado a cualquier cosa que desees.
+Las variables no pueden contener espacios y siempre deben ser secuencias o conjuntos de caracteres, como:
+'MapaDelMundo', 'NombreDelJugador', 'Jugador_1'.
+
+Puedes crear una variable que represente un número, una cadena de texto,
+una ruta ['ruta de un objeto y/o instancia'], una tabla '{}', una operación matemática
+o valores booleanos como 'true' (verdadero) o 'false'.
+
+Para crear una variable que se pueda utilizar dentro de un script,
+debes declararla primero con el prefijo 'local', lo que indica que es una variable local disponible solo en el script en el que se declara.]]
 }
 
 EJEMPLOS()
@@ -95,16 +105,16 @@ Partes_Armadura = Modelo:GetChildren()
 Tema_2 = "CARÁCTERES DEL LENGUAJE"
 
 Descriptcion = {
-"¿Qué caracteres se pueden usar en Lua para hacer un código más concreto y preciso?",
-"No es un diccionario completo, pero aquí tienes algunos símbolos que te serán útiles al programar."
+[[¿Qué caracteres se pueden usar en Lua para hacer un código más concreto y preciso?
+No es un diccionario completo, pero aquí tienes algunos símbolos que te serán útiles al programar.]]
 }
 
 EJEMPLOS()
 
 --[[ 2.1 --]] LLAVES = {
-"¿Cómo se usan las llaves? Podemos guardar 2 objetos en una sola variable usando llaves: {}.",
-"Es importante separar cada objeto con una coma para evitar errores.",
-'Las llaves, son "Tablas", y nos permite, guardar varios datos en ellas'	
+[[¿Cómo se usan las llaves? Podemos guardar 2 objetos en una sola variable usando llaves: {}.
+Es importante separar cada objeto con una coma para evitar errores.
+Las llaves, son "Tablas", y nos permite, guardar varios datos en ellas]]
 }
 
 EJEMPLOS()
@@ -113,10 +123,10 @@ local Decals = {script.Decal1, script.Decal2} -- Guardamos dos objetos en una va
 local Partes = {game.Workspace.Part, game.Workspace.Part2} 
 
 --[[ 2.2 --]] CORCHETES = {
-"¿Qué son los 'corchetes' y cómo se usan? Si un objeto tiene espacios en su nombre, se puede acceder a él usando corchetes y comillas [''].",
-"Es importante usar comillas al referirse a los nombres, de lo contrario, se producirá un error.",
-"Veremos más ejemplos más adelante. Por ahora, recuerda que puedes escribir objetos así: game.Workspace['nombre del objeto']",
-'Los corchetes, son una manera de sintaxis, que nos permite hacer acepción a un valor dentro de una tabla o similar'	
+[[¿Qué son los 'corchetes' y cómo se usan? Si un objeto tiene espacios en su nombre, se puede acceder a él usando corchetes y comillas [''].
+Es importante usar comillas al referirse a los nombres, de lo contrario, se producirá un error.
+Veremos más ejemplos más adelante. Por ahora, recuerda que puedes escribir objetos así: game.Workspace['nombre del objeto']
+Los corchetes, son una manera de sintaxis, que nos permite hacer acepción a un valor dentro de una tabla o similar]]
 }
 
 EJEMPLOS()
@@ -134,10 +144,10 @@ local Mi_Nombre = Tabla_Nombres[3]
 }
 
 --[[ 2.3.1 --]] EL_IGUAL = {
+[[Todos conocemos el igual; pero, ¿Cómo usarlo?: "="
 
-'Todos conocemos el igual; pero, ¿Cómo usarlo?: "=,',
-'El igual todos lo conocemos, es utilizado para asignar un valor a una variable y darle significado a las cosas.',
-'No creo que haga falta explicarlo mucho, todos los sabemos usar, pero aquí te doy ejemplos'	
+El igual todos lo conocemos, es utilizado para asignar un valor a una variable y darle significado a las cosas.
+No creo que haga falta explicarlo mucho, todos los sabemos usar, pero aquí te doy ejemplos]]
 }
 
 EJEMPLOS()
@@ -157,8 +167,8 @@ local ImageLabel = Frame:FindFirstChild("ImageLabel")
 
 local ColorDeFondo = ImageLabel.BackgroundColor3
 
---[[ 2.3.1.1 --]] OPERACIONES_MATEMATICAS = {'Conocerás las operaciones matemáticas posibles en'.. Lua,
-'No es realmente complicado, te mostraré las operaciones que puedes realizar, y sus ejemplos'
+--[[ 2.3.1.1 --]] OPERACIONES_MATEMATICAS = {[[Conocerás las operaciones matemáticas posibles en]], Lua' ..'
+[[No es realmente complicado, te mostraré las operaciones que puedes realizar, y sus ejemplos]]
 }
 
 -- Ejemplo de operaciones matemáticas en Lua
@@ -216,11 +226,11 @@ print("Número aleatorio:", aleatorio)
 
 --[[ 2.3.2 --]] EL_DOBLE_IGUAL = {
 
-'¿Cómo, y dónde empleamos un doble igual?: "El doble igual puede ser usado raras veces en variables,',
-'En Lua, el operador de comparación doble igual ("==") se utiliza para realizar una comparación de igualdad entre dos valores.',
+[[¿Cómo, y dónde empleamos un doble igual?: "El doble igual puede ser usado raras veces en variables,
+En Lua, el operador de comparación doble igual ("==") se utiliza para realizar una comparación de igualdad entre dos valores.
 	
-'A diferencia del operador de asignación simple ("="), que se utiliza para asignar valores a variables,',
-'el operador de igualdad se utiliza para evaluar si dos valores son iguales y devuelve un valor booleano (verdadero o falso) como resultado'
+A diferencia del operador de asignación simple ("="), que se utiliza para asignar valores a variables,
+el operador de igualdad se utiliza para evaluar si dos valores son iguales y devuelve un valor booleano (verdadero o falso) como resultado]]
 }
 
 EJEMPLOS()
@@ -235,8 +245,8 @@ else
 end
 
 --[[ 2.3.3 --]] OPERADORES__MENOR_QUE__MAYOR_QUE = {
-'Los símbolos "<" y ">" se conocen como operadores de comparación "menor que" y "mayor que", respectivamente.',
-'En Lua y Luau, se utilizan para comparar dos valores y devolver un resultado booleano (verdadero o falso) basado en la relación de orden entre ellos'
+[[Los símbolos "<" y ">" se conocen como operadores de comparación "menor que" y "mayor que", respectivamente.
+En Lua y Luau, se utilizan para comparar dos valores y devolver un resultado booleano (verdadero o falso) basado en la relación de orden entre ellos]]
 }
 
 EJEMPLOS()
@@ -274,15 +284,15 @@ end
 Tema_3 = "CARÁCTERES EN INGLÉS"
 
 Descripcion = {
-'¿Cómo puedo implementar caracteres en inglés para programar?: "No es complicado, usaremos algunos caracteres para poder',
-'referenciar o mejorar nuestro código; mucho cuidado de abusar demasiado de algunos de estos"'
+[[¿Cómo puedo implementar caracteres en inglés para programar?: "No es complicado, usaremos algunos caracteres para poder
+referenciar o mejorar nuestro código; mucho cuidado de abusar demasiado de algunos de estos"]]
 }
 
 EJEMPLOS()
 
---[[ 3.1 --]] USO_DE = {'"or":',
-'¿Qué es "or"?: "or" viene a significar en español "o", "o si no", "o también", etc. Lo usamos para llamar algo de varias maneras distintas"',
-'El operador "or" se utiliza principalmente en estructuras condicionales o expresiones booleanas para evaluar múltiples condiciones y determinar si alguna de ellas es verdadera'	
+--[[ 3.1 --]] USO_DE = {[["or":
+¿Qué es "or"?: "or" viene a significar en español "o", "o si no", "o también", etc. Lo usamos para llamar algo de varias maneras distintas"
+El operador "or" se utiliza principalmente en estructuras condicionales o expresiones booleanas para evaluar múltiples condiciones y determinar si alguna de ellas es verdadera]]
 }
 
 EJEMPLOS()
@@ -318,10 +328,10 @@ local result2 = x or y or z
 print(result2) -- Salida: hola
 
 
---[[ 3.2 --]] USO_DE = {'"nil"',
-'¿Qué es, y cómo puedo usar "nil"?: "nil" viene a significar "nada" o nulo,',
-'Se utiliza, para referenciar algo que no existe, o detectar si algo es inexistente, o quizá esperar a que algo sea distinto de la "in-existencia"',	
-'puede ser usado de las siguientes formas":'
+--[[ 3.2 --]] USO_DE = {[["nil"
+¿Qué es, y cómo puedo usar "nil"?: "nil" viene a significar "nada" o nulo,
+Se utiliza, para referenciar algo que no existe, o detectar si algo es inexistente, o quizá esperar a que algo sea distinto de la "in-existencia"
+puede ser usado de las siguientes formas":]]
 }
 
 EJEMPLOS()
@@ -340,11 +350,11 @@ elseif Jugador ~= nil then
 	print(Jugador.Name)
 end
 
---[[ 3.3 --]] USO_DE = {'if, else, elseif',
-'¿Qué son if, else, elseif y then, y cómo usarlos?: "if" se traduce como "si". Se utiliza para establecer condiciones, como "si pasa esto", "si ocurre esto", "si fuera esto", "si no es esto", etc.',
-'"else" se traduce como "si no". Se utiliza cuando la condición del "if" no se cumple, es decir, "si no es así", "si no existe", "si no sucede", "si no pasó", etc.',
-'"elseif" se traduce como "pero si". Se utiliza para agregar condiciones adicionales después de un "if" y antes de un "else". Por ejemplo, "pero si no es así", "pero si ocurre esto", "pero si cambió esto", "pero si se borró esto", etc.',
-'"then" se traduce como "entonces". Se utiliza para indicar qué sucede si se cumple la condición del "if", por ejemplo, "entonces sucede esto", "entonces pasa esto", "entonces cambia esto", "entonces aquello", etc."'
+--[[ 3.3 --]] USO_DE = {[[if, else, elseif
+¿Qué son if, else, elseif y then, y cómo usarlos?: "if" se traduce como "si". Se utiliza para establecer condiciones, como "si pasa esto", "si ocurre esto", "si fuera esto", "si no es esto", etc.
+"else" se traduce como "si no". Se utiliza cuando la condición del "if" no se cumple, es decir, "si no es así", "si no existe", "si no sucede", "si no pasó", etc.
+"elseif" se traduce como "pero si". Se utiliza para agregar condiciones adicionales después de un "if" y antes de un "else". Por ejemplo, "pero si no es así", "pero si ocurre esto", "pero si cambió esto", "pero si se borró esto", etc.
+"then" se traduce como "entonces". Se utiliza para indicar qué sucede si se cumple la condición del "if", por ejemplo, "entonces sucede esto", "entonces pasa esto", "entonces cambia esto", "entonces aquello", etc."]]
 }
 
 EJEMPLOS()
@@ -397,10 +407,10 @@ end  -- Termina el bloque condicional
 --[[ 3.4 --]] Sintaxis_Y_Bucles = {'Aprenderemos sobre la sintaxis de los bucles de Lua, para que los puedas usar',	
 }
 
---[[ 3.4.1 --]] USO_DE = {'Bucle "for"',
-'El bucle "for" se utiliza para repetir una serie de instrucciones un número específico de veces.',
-'Puedes definir el rango de iteración utilizando valores numéricos o un iterador que recorra una colección.',
-'Aquí tienes un ejemplo de cómo utilizar el bucle "for":'
+--[[ 3.4.1 --]] USO_DE = {[[Bucle "for"
+El bucle "for" se utiliza para repetir una serie de instrucciones un número específico de veces.
+Puedes definir el rango de iteración utilizando valores numéricos o un iterador que recorra una colección.
+Aquí tienes un ejemplo de cómo utilizar el bucle "for":]]
 }
 
 EJEMPLOS()
@@ -416,10 +426,10 @@ for indice, valor in ipairs(miTabla) do
 	print("Elemento", indice, ":", valor)
 end
 
---[[ 3.4.2 --]] USO_DE = {'Bucle "while"',
-'El bucle "while" se utiliza cuando quieres repetir un bloque de código mientras se cumple una condición.',
-'El bloque de código se ejecutará siempre y cuando la condición sea verdadera.',
-'Aquí tienes un ejemplo de cómo utilizar el bucle "while":'
+--[[ 3.4.2 --]] USO_DE = {[[Bucle "while"
+El bucle "while" se utiliza cuando quieres repetir un bloque de código mientras se cumple una condición.
+El bloque de código se ejecutará siempre y cuando la condición sea verdadera.
+Aquí tienes un ejemplo de cómo utilizar el bucle "while":]]
 }
 
 EJEMPLOS()
@@ -430,10 +440,10 @@ while contador <= 5 do
 	contador = contador + 1
 end
 
---[[ 3.4.3 --]] USO_DE = {'Bucle "repeat..until"',
-'El bucle "repeat...until" es similar al bucle "while", pero la condición se evalúa al final del bloque de código.',
-'Esto significa que el bloque de código se ejecutará al menos una vez y luego se repetirá hasta que la condición sea verdadera.',
-'Aquí tienes un ejemplo de cómo utilizar el bucle "repeat...until":'
+--[[ 3.4.3 --]] USO_DE = {[[Bucle "repeat..until"
+El bucle "repeat...until" es similar al bucle "while", pero la condición se evalúa al final del bloque de código.
+Esto significa que el bloque de código se ejecutará al menos una vez y luego se repetirá hasta que la condición sea verdadera.
+Aquí tienes un ejemplo de cómo utilizar el bucle "repeat...until":]]
 }
 
 EJEMPLOS()
@@ -454,10 +464,12 @@ repeat -- Iteramos el bucle
 	player = Players.LocalPlayer -- Repetimos el valor de la variable
 until player ~= nil -- Hasta que "player" sea diferente de la in-existencia o de "nil"
 
---[[ 3.4.4 --]] Crear_Tus_Propias_Funciones = {'Aprenderás a crear tus propias funciones',
-'Puedes definir y utilizar funciones propias en Lua.',
-'Las funciones son bloques de código que se pueden llamar en diferentes partes de tu programa.',
-'Puedes definir funciones utilizando la palabra clave "function" y llamarlas utilizando su nombre seguido de paréntesis'
+--[[ 3.4.4 --]] Crear_Tus_Propias_Funciones = {
+[[Aprenderás a crear tus propias funciones
+
+Puedes definir y utilizar funciones propias en Lua.
+Las funciones son bloques de código que se pueden llamar en diferentes partes de tu programa.
+Puedes definir funciones utilizando la palabra clave "function" y llamarlas utilizando su nombre seguido de paréntesis]]
 }
 
 EJEMPLOS()
@@ -511,18 +523,18 @@ end
 
 Tabla_Nombres_Numero:WaitForDataOfClass("number") -- Utilizamos la función, pasando que se busque un dato numérico
 
---[[ 3.4.5 --]] MODULOS_Y_BIBLIOTECAS = {'Aprenderemos sobre los módulos y bibliotecas',
-'En Lua, los módulos y bibliotecas son mecanismos que permiten extender las capacidades del lenguaje',
-'y acceder a funciones y características adicionales proporcionadas por código externo',	
-'Un módulo es un archivo de código Lua que contiene un conjunto de funciones y variables relacionadas',
-'Una biblioteca, por otro lado, es un conjunto de módulos relacionados.',
-'Puede contener varios módulos agrupados para brindar una funcionalidad más completa y organizada'	
+--[[ 3.4.5 --]] MODULOS_Y_BIBLIOTECAS = {[[Aprenderemos sobre los módulos y bibliotecas
+En Lua, los módulos y bibliotecas son mecanismos que permiten extender las capacidades del lenguaje
+y acceder a funciones y características adicionales proporcionadas por código externo
+Un módulo es un archivo de código Lua que contiene un conjunto de funciones y variables relacionadas
+Una biblioteca, por otro lado, es un conjunto de módulos relacionados.
+Puede contener varios módulos agrupados para brindar una funcionalidad más completa y organizada]]
 }
 
-NOTA = {'Para cargar un módulo o biblioteca en Lua, se utiliza la función require().',
-'Esta función recibe como argumento el nombre del módulo o la ruta del archivo que contiene el módulo.',
-'Por ejemplo, si quieres cargar el módulo "io" para acceder a las funciones de lectura y escritura de archivos',
-'puedes hacerlo de la siguiente manera:'
+NOTA = {[[Para cargar un módulo o biblioteca en Lua, se utiliza la función require().
+Esta función recibe como argumento el nombre del módulo o la ruta del archivo que contiene el módulo.
+Por ejemplo, si quieres cargar el módulo "io" para acceder a las funciones de lectura y escritura de archivos
+puedes hacerlo de la siguiente manera:]]
 }
 
 EJEMPLOS()
@@ -640,8 +652,8 @@ end
 -- Cerrar la conexión a la base de datos
 db:close()
 
-NOTA = {'En este ejemplo, se carga la librería lsqlite3 utilizando require("lsqlite3").',
-'Esta librería permite trabajar con bases de datos SQLite en Lua.'
+NOTA = {[[En este ejemplo, se carga la librería lsqlite3 utilizando require("lsqlite3").
+Esta librería permite trabajar con bases de datos SQLite en Lua.]]
 }
 
 --
@@ -649,22 +661,22 @@ NOTA = {'En este ejemplo, se carga la librería lsqlite3 utilizando require("lsq
 --
 --[[ 3.5 --]] Lenguaje_En_Roblox_Studio = "USO_DE_EVENTOS, APIS_BASICAS, SERVICIOS y TERMINOS"
 Descripcion = {
-"En esta sección aprenderás sobre los servicios, eventos, APIs y términos utilizados en Roblox Studio.",
-"Es importante tener conocimientos básicos de inglés, ya que gran parte de la documentación está en ese idioma.",
-"A continuación, te mostraremos los más utilizados y cómo usarlos en tus proyectos."
+[[En esta sección aprenderás sobre los servicios, eventos, APIs y términos utilizados en Roblox Studio.
+Es importante tener conocimientos básicos de inglés, ya que gran parte de la documentación está en ese idioma.
+A continuación, te mostraremos los más utilizados y cómo usarlos en tus proyectos.]]
 }
 
---[[ 3.5.1 --]] USO_DE = {'Uso de :FindFirstChild() y :FindFirstChildOfClass():',
-'La función :FindFirstChild() se utiliza para buscar una instancia específica dentro de otra.',
-'Por ejemplo, puedes buscar un "ImageLabel" dentro de un objeto utilizando:',
-'local ImageLabel = script.Parent:FindFirstChild("ImageLabel")',
-'Si no tienes una variable con el nombre que deseas buscar, puedes usar comillas:',
-'local ImageLabel = script.Parent:FindFirstChild("ImageLabel")',
+--[[ 3.5.1 --]] USO_DE = {[[Uso de :FindFirstChild() y :FindFirstChildOfClass():
+La función :FindFirstChild() se utiliza para buscar una instancia específica dentro de otra.
+Por ejemplo, puedes buscar un "ImageLabel" dentro de un objeto utilizando:
+local ImageLabel = script.Parent:FindFirstChild("ImageLabel")
+Si no tienes una variable con el nombre que deseas buscar, puedes usar comillas:
+local ImageLabel = script.Parent:FindFirstChild("ImageLabel")
 	
-'La función :FindFirstChildOfClass() se utiliza para buscar una instancia de una clase específica,',
-'incluso si no tiene el mismo nombre que su clase. Por ejemplo:',
-'local Humanoid = Character:FindFirstChildOfClass("Humanoid")',
-'Aquí estamos buscando una instancia de la clase "Humanoid" dentro del objeto "Character".'
+La función :FindFirstChildOfClass() se utiliza para buscar una instancia de una clase específica,
+incluso si no tiene el mismo nombre que su clase. Por ejemplo:
+local Humanoid = Character:FindFirstChildOfClass("Humanoid")
+Aquí estamos buscando una instancia de la clase "Humanoid" dentro del objeto "Character".]]
 }
 
 EJEMPLOS()
@@ -677,13 +689,13 @@ local ImageLabel = script.Parent:FindFirstChild(ImageLabelName) or script.Parent
 local Carpeta = "Folder"
 local Folder = script.Parent:FindFirstChildOfClass(Carpeta)
 
---[[ 3.5.2 --]] USO_DE = { 'Uso de :WaitForChild():',
+--[[ 3.5.2 --]] USO_DE = {[[Uso de :WaitForChild():
 	
-'La función :WaitForChild() se utiliza para esperar hasta que una instancia en particular aparezca.',
-'Es importante usarla con cuidado, ya que puede ralentizar la ejecución del código.',
-'Por ejemplo:',
-'local character = game:GetService("Workspace"):WaitForChild(Jugador.Name)',
-'Aquí estamos esperando a que la instancia del personaje del jugador aparezca en el Workspace.'
+La función :WaitForChild() se utiliza para esperar hasta que una instancia en particular aparezca.
+Es importante usarla con cuidado, ya que puede ralentizar la ejecución del código.
+Por ejemplo:
+local character = game:GetService("Workspace"):WaitForChild(Jugador.Name)
+Aquí estamos esperando a que la instancia del personaje del jugador aparezca en el Workspace.]]
 }
 
 EJEMPLOS()
@@ -693,8 +705,8 @@ local player = game.Players:FindFirstChild() -- Buscamos un jugador
 local character = game:GetService("Workspace"):WaitForChild(player.Name) -- Enfatizamos el personaje del jugador
 local Humanoid = character:WaitForChild("Humanoid") -- Buscamos la instancia de Humanoid en el personaje
 
-NOTA = {"Ten en cuenta, que tanto" .. ':FindFirstChild()' .. ':FindFirstChildOfClass()' .. ":WaitForChild()",
-	"son operadores exclusivos del lenguaje ".. Luau " (una variante de Lua, pero única de Roblox y para Roblox)"
+NOTA = {[[Ten en cuenta, que tanto .. :FindFirstChild() .. :FindFirstChildOfClass() .. :WaitForChild()
+son operadores exclusivos del lenguaje]] .. Luau [[" (una variante de Lua, pero única de Roblox y para Roblox)]]
 }
 
 --[[ 3.5.2 --]] USO_DE = {'funciones de '.. Lua("Funciones Naturales") .."y".. Luau("Únicas en Roblox"),
@@ -1531,7 +1543,7 @@ sharedTable:increment("counter")
 
 --[[-- OPERADORES DE LUAU --]]--
 
-NOTA = {'Veremos los operadores de'.. Luau ''..'Espero que puedas comprender bien, que son distintos a'.. Lua ..''}
+NOTA = {'Veremos los operadores de'.. Luau ''..'Espero que puedas comprender bien, que son distintos a'.. Lua '..'}
 
 --[[
 Son operadores que no están en Lua, y aunque, realmente pertenecen al lenguaje de Luau exclusivamente
@@ -2260,8 +2272,8 @@ game:GetService("UserInputService").InputBegan:Connect(function(input)
 end)
 -- Escucha los eventos de entrada y muestra un mensaje cuando se presiona la tecla Espacio o la tecla E
 
-NOTA = {'Los operadores relacionados con UTF-8 en Lua se encuentran en la biblioteca estándar utf8.',
-'Aquí tienes ejemplos de cómo usar algunos de estos operadores:'
+NOTA = {[[Los operadores relacionados con UTF-8 en Lua se encuentran en la biblioteca estándar utf8.
+Aquí tienes ejemplos de cómo usar algunos de estos operadores:]]
 }
 
 -- Operador utf8.len()
@@ -2437,13 +2449,13 @@ setfenv(mi_Function, env)  -- Establece el entorno de ejecución de myFunction c
 local currentEnv = getfenv(mi_Function)  -- Obtiene el entorno de ejecución de myFunction
 print(currentEnv.myVariable)  -- Imprime 42, ya que myVariable está definida en el entorno de ejecución de myFunction
 
-NOTA = {'En el primer ejemplo, utilizamos setfenv() para establecer el entorno de ejecución de myFunction',
-'como env, que es una tabla que contiene una variable llamada myVariable.',
-'Dentro de myFunction, podemos acceder y utilizar myVariable porque está definida',
-	'en el entorno de ejecución de la función',
+NOTA = {[[En el primer ejemplo, utilizamos setfenv() para establecer el entorno de ejecución de myFunction
+como env, que es una tabla que contiene una variable llamada myVariable.
+Dentro de myFunction, podemos acceder y utilizar myVariable porque está definida
+en el entorno de ejecución de la función',
 	--
-	'En el segundo ejemplo, utilizamos getfenv() para obtener el entorno de ejecución actual de myFunction.',
-	'Luego, accedemos a la variable myVariable en ese entorno y la imprimimos'
+En el segundo ejemplo, utilizamos getfenv() para obtener el entorno de ejecución actual de myFunction.
+Luego, accedemos a la variable myVariable en ese entorno y la imprimimos]]
 }
 
 -- Ejemplo de operadores de DateTime en Luau (Roblox)
@@ -2481,15 +2493,15 @@ Descripcion = {
 'Te mostraremos algunas funciones que puedes hacer en tus juegos por tu propia cuenta, con explicación'
 }
 --------------------------------------------------------------------------------------------------------
-Crear_Dinero_Para_Mi_Juego()
+CREAR_DINERO_PARA_MI_JUEGO()
 
 Descripcion = {
 	
-'Necesitamos saber como funciona el crear y instruir una instancia para "X" partido-tarea.',
-'Una instancia puede ser un folder, un valor, un bloque, un modelo etc, conocerlos es de gran ayuda.',
-'Crearemos un folder adentro del jugador que entre al juego, y dentro de ese folder un valor',
-'el folder se llamará: "leaderstats", el tipo de valor sera "IntValue", el nombre puede ser: "Dinero"',
-'NOTA: Importante crear todo esto desde un Script; de ningúna manera en un LocalScript ya que solo afectará al player',
+[[Necesitamos saber como funciona el crear y instruir una instancia para "X" partido-tarea.
+Una instancia puede ser un folder, un valor, un bloque, un modelo etc, conocerlos es de gran ayuda.
+Crearemos un folder adentro del jugador que entre al juego, y dentro de ese folder un valor
+el folder se llamará: "leaderstats", el tipo de valor sera "IntValue", el nombre puede ser: "Dinero"
+NOTA: Importante crear todo esto desde un Script; de ningúna manera en un LocalScript ya que solo afectará al player]],
 	
 	Codigos_Que_Usaremos = "game:GetService(), Instance.new()",
 	
@@ -2515,10 +2527,10 @@ end)
 CARGAR_UN_PERSONAJE()
 
 Descripcion = {
-'¿Algúna vez has querido cargar un personaje, por ejemplo, del jugador con más Dinero, o de un amigo? Te digo como.',
-'Primero, te adelanto que si quieres poner un personaje con el avatar que tenga, puedes usar un Plugin.',
-'Si lo que te interesa es que el personaje sea el que la persona tiene, o tú mismo tienes y se actualice cada que cambie de ropa, entonces has lo siguiente que te enseñaré:',
-'Puedes crear un Script, y ponerlo dentro de un "Dummy" y hacerlo de la forma siguiente',
+[[¿Algúna vez has querido cargar un personaje, por ejemplo, del jugador con más Dinero, o de un amigo? Te digo como.
+Primero, te adelanto que si quieres poner un personaje con el avatar que tenga, puedes usar un Plugin.
+Si lo que te interesa es que el personaje sea el que la persona tiene, o tú mismo tienes y se actualice cada que cambie de ropa, entonces has lo siguiente que te enseñaré:
+Puedes crear un Script, y ponerlo dentro de un "Dummy" y hacerlo de la forma siguiente]],
 	
 	Codigos_Que_Usaremos = "game:GetService(), ApplyDescription(), GetHumanoidDescriptionFromUserId()",
 	
@@ -2555,8 +2567,8 @@ end)
 GUARDAR_CUALQUIER_DATO_DE_TU_JUEGO__USO_DE_DATASTORESERVICE()
 
 Descripcion = {
-'Puedes ser un gran creador de juegos si sabes manejar el "DataStoreService", puedes guardar prácticamente cualquier valor en tu juego',
-'Te enseñaremos como guardar "Dinero" para éste ejemplo',
+[[Puedes ser un gran creador de juegos si sabes manejar el "DataStoreService", puedes guardar prácticamente cualquier valor en tu juego
+Te enseñaremos como guardar "Dinero" para éste ejemplo]],
 	
 	Codigos_Que_Usaremos = 'game:GetService(), GetDataStore(), GetAsync(), SetAsync(), condicional: "if", pcall(function(), bucle: "for", GetPlayers()',
 	
@@ -2565,8 +2577,8 @@ Descripcion = {
 	Parametros_Requeridos = "player"
 }
 
-NOTA = {"Puedes guardar la información desde un Módulo o como gustes",
-"pero te enseñaremos a guardar 'Dinero' desde una misma hoja de código."
+NOTA = {[[Puedes guardar la información desde un Módulo o como gustes
+pero te enseñaremos a guardar 'Dinero' desde una misma hoja de código.]]
 }
 
 PROCESO()
@@ -2610,8 +2622,8 @@ end)
 CREAR_UN_PUNTO_DE_GUARDADO()
 
 Descripcion = {
-'Puedes crear diferentes puntos de guardado para tus juegos, así será más divertido para todos',
-'Te enseñaremos como crear un punto de guardado (no necesariamente en un Spawn)',
+[[Puedes crear diferentes puntos de guardado para tus juegos, así será más divertido para todos
+Te enseñaremos como crear un punto de guardado (no necesariamente en un Spawn)]],
 
 	Codigos_Que_Usaremos = 'Players.GetPlayerFromCharacter()',
 
@@ -2674,10 +2686,11 @@ Descripcion = {
 	Parametros_Requeridos = 'Dos parámetros sin un nombre fijo; por practicidad, sugiero: "partA" y "partB"'	
 }
 
-NOTA = {'Este script utiliza el evento CollisionEnter del servicio Workspace',
-'para detectar cuando ocurre una colisión entre dos partes.',
-'Al producirse una colisión, se llama a la función manejarColision que imprime un mensaje en la consola',
-'junto con el nombre de las partes que colisionaron'
+NOTA = {[[Este script utiliza el evento CollisionEnter del servicio Workspace
+para detectar cuando ocurre una colisión entre dos partes.
+
+Al producirse una colisión, se llama a la función manejarColision que imprime un mensaje en la consola
+junto con el nombre de las partes que colisionaron]]
 }
 
 PROCESO()
@@ -2706,6 +2719,7 @@ end)
 CREAR_PARTICULAS_AL_SALTAR()
 
 Descripcion = {'Este script crea un efecto visual de partículas alrededor de un jugador cuando este salta',
+	
 	Codigos_Que_Usaremos = 'Instance.new(), NumberRange.new(), Vector3.new(), ColorSequence.new(), Destroy(), WaitForChild(), game:GetService()',
 	
 	Eventos_Que_Detectaremos = 'game:GetService("Players").PlayerAdded, player.CharacterAdded, humanoid.Jumping',
@@ -2713,9 +2727,9 @@ Descripcion = {'Este script crea un efecto visual de partículas alrededor de un
 	Parametros_Requeridos = 'HumanoidRootPart.Position, player, character'
 }
 
-NOTA = {'Este script utiliza un ParticleEmitter para crear un efecto de partículas alrededor del jugador cuando salta.',
-'Al saltar, se llama a la función crearParticulas que crea y configura un ParticleEmitter en la posición del jugador.',
-'Las partículas se dispersan en todas las direcciones y caen hacia abajo debido a la gravedad simulada.'
+NOTA = {[[Este script utiliza un ParticleEmitter para crear un efecto de partículas alrededor del jugador cuando salta.
+Al saltar, se llama a la función crearParticulas que crea y configura un ParticleEmitter en la posición del jugador.
+Las partículas se dispersan en todas las direcciones y caen hacia abajo debido a la gravedad simulada.]]
 }
 
 --[[
@@ -2768,8 +2782,9 @@ end)
 --------------------------------------------------------------------------------------------------------
 CREAR_PUNTO_DE_CONTROL()
 
-Descripcion = {'Aquí tienes un ejemplo de cómo puedes crear un punto de checkpoint en un juego de Roblox Studio',
-'Para crear un punto de checkpoint, necesitarás seguir estos pasos',
+Descripcion = {
+[[Aquí tienes un ejemplo de cómo puedes crear un punto de checkpoint en un juego de Roblox Studio
+Para crear un punto de checkpoint, necesitarás seguir estos pasos]],
 	
 	Codigos_Que_Usaremos = 'condicional: "if", IsA(), FindFirstChildOfClass(), GetPlayerFromCharacter(), Destroy(), Clone(), SetPrimaryPartCFrame(), Instance.new()',
 	
@@ -2778,17 +2793,17 @@ Descripcion = {'Aquí tienes un ejemplo de cómo puedes crear un punto de checkp
 	Parametros_Requeridos = 'hit'	
 }
 
-NOTA = {'En Roblox Studio, crea un modelo que represente el punto de checkpoint. Puedes agregar partes y decoraciones según tus preferencias.',
-'Asegúrate de que el modelo esté en ServerStorage y tenga un PrimaryPart establecido correctamente.',
-'Crea un nuevo Script en ServerScriptService y coloca el código anterior en él.',
-'En el código, ajusta la configuración según tus necesidades.',
-'Por ejemplo, cambia el nombre del modelo de punto de checkpoint en la línea',
+NOTA = {[[En Roblox Studio, crea un modelo que represente el punto de checkpoint. Puedes agregar partes y decoraciones según tus preferencias.
+Asegúrate de que el modelo esté en ServerStorage y tenga un PrimaryPart establecido correctamente.
+Crea un nuevo Script en ServerScriptService y coloca el código anterior en él.
+En el código, ajusta la configuración según tus necesidades.
+Por ejemplo, cambia el nombre del modelo de punto de checkpoint en la línea]],
 --local puntoDeControlModel = ServerStorage:FindFirstChild("PuntoDeControlModel")
-'para que coincida con el nombre del modelo que creaste.',
-'Define la posición de respawn del jugador en el punto de checkpoint ajustando el valor de puntoDeControlRespawnPosition',
-'a las coordenadas deseadas.',
-'Ejecuta el script y verás que se crea un punto de checkpoint en la posición del script en el juego.',
-'Cuando un jugador toque el punto de checkpoint, su posición de respawn se establecerá y el punto de checkpoint se eliminará.'
+[[para que coincida con el nombre del modelo que creaste.
+Define la posición de respawn del jugador en el punto de checkpoint ajustando el valor de puntoDeControlRespawnPosition
+a las coordenadas deseadas.
+Ejecuta el script y verás que se crea un punto de checkpoint en la posición del script en el juego.
+Cuando un jugador toque el punto de checkpoint, su posición de respawn se establecerá y el punto de checkpoint se eliminará.]]
 }
 
 --[[
@@ -2835,6 +2850,336 @@ if puntoDeControlModel then
 	touchDetector.Touched:Connect(onTouched)
 end
 --------------------------------------------------------------------------------------------------------
+DAR_EMBLEMA_A_UN_JUGADOR()
+
+Descripcion = {
+[[Con este sistema, aprenderás a cómo otorgar o dar un emblema a un jugador (siempre y cuando no lo tenga).
+El sistema es fácil, aprenderás cómo se le da un emblema a un jugador]],
+	Codigos_Que_Usaremos = '',
+	
+	Eventos_Que_Detectaremos = '',
+	
+	Parametros_Requeridos = ''
+}
+
+NOTA = {[[Puedes dar un emblema a un jugador en cualquier momento y cuando quieras.
+Te mostraré ejemplos con lo más común que hacen los desarrolladores]]}
+
+PROCESO()
+
+--[[-- EJEMPLO 1 --]]--
+
+--Ejemplo de dar un emblema al tocar una part
+local Players = game:GetService("Players")
+--Obtenemos el servicio de Badgeservice (se traduce como: "Servicio De Emblemas")
+local BadgeService = game:GetService("BadgeService")
+--Creamos una variable con el "ID" del emblema:
+local idEmblema = 2125771710
+
+--Referenciamos una part
+local part = game.Workspace:FindFirstChildOfClass("Part")
+
+part.Touched:Connect(function(hit)
+	--Una condicional para detectar si lo que a tocado es la parte de un personaje y, además, es un jugador y no un NPC
+	if (hit and hit.Parent and hit.Parent:IsA("Model") and hit.Parent:FindFirstChildOfClass("Humanoid")
+		and Players:FindFirstChild(hit.Parent.Name)) then
+		--Si el jugador no tiene el emblema, entonces se lo daremos después del if
+		if not BadgeService:UserHasBadgeAsync(player.UserId , idEmblema) then
+			BadgeService:AwardBadge(player.UserId , idEmblema)
+		end
+		--
+	end
+end)
+
+--[[-- EJEMPLO 2 --]]--
+-- GANAR UN EMBLEMA AL COMPLETAR UN OBBY QUE ESTÁ EN OTRO PLACE --
+
+PROCESO()
+
+NOTA = {[[En el lugar secundario donde está el Obby, puedes crear un script que detecte cuando un jugador ha completado el Obby.
+Una vez que el jugador lo haya completado, puedes crear una instancia de TeleportOptions
+y establecer una propiedad personalizada llamada CompletedObby en verdadero.
+Luego, puedes usar TeleportService:TeleportAsync() para teletransportar al jugador de regreso al lugar principal
+y pasar la instancia de TeleportOptions como parámetro.
+
+Aquí hay un ejemplo de código que muestra cómo hacer esto en el lugar secundario:]]
+}
+
+--[[-- SCRIPT DESDE EL LUGAR DEL OBBY --]]--
+
+--Señalamos el servicio de Teletransportación
+local TeleportService = game:GetService("TeleportService")
+local BadgeService = game:GetService("BadgeService")
+
+local Players = game:GetService("Players")
+
+local idEmblema = 12345678910
+
+local PLACE_ID = 123456 -- ID del lugar principal del juego
+
+-- Detectar cuando el jugador ha completado el Obby
+
+--Variable de part
+local part_Meta_Lugar_De_Meta = game.Workspace:FindFirstChildOfClass("Part")
+
+--Tetectamos si el jugador tocó la meta
+part_Meta_Lugar_De_Meta.Touched:Connect(function(hit)
+	--Si lo que tocó existe, y es el personaje de un jugador y no un NPC
+	if (hit and hit.Parent and hit.Parent:IsA("Model") and hit.Parent:FindFirstChildOfClass("Humanoid")
+		and Players:FindFirstChild(hit.Parent.Name)) then
+		
+		-- Crear un DataTable y establecer la propiedad CompletedObby en verdadero
+		local teleportData = {CompletedObby = true}
+		
+		-- Teletransportar al jugador de regreso al lugar principal
+		TeleportService:Teleport(PLACE_ID, player, nil, teleportData)
+	end
+end)
+-- ...
+
+--[[-- SCRIPT DESDE EL LUGAR PRINCIPAL --]]--
+
+local Players = game:GetService("Players")
+local TeleportService = game:GetService("TeleportService")
+
+
+-- Conectar una función al evento PlayerAdded
+Players.PlayerAdded:Connect(function(player)
+	-- Verificar si el jugador tiene una propiedad TeleportData:
+	
+	-- Conectar una función al evento LocalPlayerArrivedFromTeleport
+	TeleportService.LocalPlayerArrivedFromTeleport:Connect(function(fromPlaceId, fromInstanceId, teleportData)
+		-- Verificar si la propiedad CompletedObby es verdadera:
+		if teleportData.CompletedObby == true then
+			-- Otorgarle al jugador el emblema correspondiente
+			if not BadgeService:UserHasBadgeAsync(player.UserId , idEmblema) then
+				BadgeService:AwardBadge(player.UserId , idEmblema)
+			end
+			--
+		end
+	end)
+
+end)
+
+--------------------------------------------------------------------------------------------------------
+COLOCAR_UN_TAG_AL_NOMBRE_EN_CHAT()
+
+Descripcion = {
+    [[Este script muestra cómo agregar un "Tag" al chat de un jugador en Roblox.
+    Para hacer esto, utilizamos el servicio `Chat` para obtener el objeto `Speaker` del jugador y luego
+    usamos el método `SetExtraData` para establecer el "Tag" del jugador.
+    En este ejemplo, verificamos si el jugador tiene un Game Pass específico y, si es así,
+    le damos un "Tag" de "VIP" en el chat.]],
+
+	Codigos_Que_Usaremos = "game:GetService(), ChatService:GetSpeaker(), Speaker:SetExtraData()",
+
+	Eventos_Que_Detectaremos = "Players.PlayerAdded",
+
+	Parametros_Requeridos = "player"
+}
+
+PROCESO()
+
+-- Obtener el servicio Players para detectar cuándo un jugador se une al juego
+local Players = game:GetService("Players")
+
+-- Obtener el servicio Chat para poder agregar un "Tag" al chat del jugador
+local ChatService = require(game.ServerScriptService:WaitForChild("ChatServiceRunner"):WaitForChild("ChatService"))
+
+-- Obtener el servicio MarketplaceService para verificar si el jugador tiene un Game Pass específico
+local MarketplaceService = game:GetService("MarketplaceService")
+
+-- Establecer el ID del Game Pass que queremos verificar
+local idGamePass = 1234567891011
+
+-- Conectar una función al evento PlayerAdded para detectar cuándo un jugador se une al juego
+Players.PlayerAdded:Connect(function(player)
+	-- Crear una variable local para almacenar si el jugador tiene el Game Pass
+	local gamePass
+
+	-- Usar pcall para llamar a UserOwnsGamePassAsync y verificar si el jugador tiene el Game Pass
+	pcall(function()
+		gamePass = MarketplaceService:UserOwnsGamePassAsync(player.UserId , idGamePass)
+	end)
+
+	-- Verificar si el jugador tiene el Game Pass
+	if gamePass == true then
+		-- Obtener el objeto Speaker del jugador utilizando el servicio Chat
+		local speaker = ChatService:GetSpeaker(player.Name)
+
+		-- Establecer el "Tag" del jugador en "VIP" utilizando el método SetExtraData
+		speaker:SetExtraData("Tags", {{ TagText = "VIP" , TagColor = Color3.fromRGB(255, 170, 0) }})
+	end
+end)
+
+--------------------------------------------------------------------------------------------------------
+DETECTAR_SI_UN_JUGADOR_ESTA_EN_UN_GRUPO()
+
+Descripcion = {
+    [[Este script muestra cómo detectar si un jugador está en un grupo específico en Roblox y aumentar su velocidad de caminar.
+    Para hacer esto, utilizamos el método `IsInGroup` del objeto `Player` para verificar si el jugador está en el grupo.
+    En este ejemplo, verificamos si el jugador está en un grupo específico y, si es así,
+    aumentamos la propiedad `WalkSpeed` del `Humanoid` del personaje del jugador.]],
+
+	Codigos_Que_Usaremos = "game:GetService(), Player:IsInGroup()",
+
+	Eventos_Que_Detectaremos = "Players.PlayerAdded, CharacterAdded",
+
+	Parametros_Requeridos = "player, character"
+}
+
+NOTA = {[[Este sistema/ejemplo utiliza el servicio Players para detectar cuándo un jugador se une al juego
+mediante el evento PlayerAdded.
+Cuando un jugador se une, el script conecta una función al evento CharacterAdded del jugador para detectar
+cuándo su personaje ha sido agregado al juego.
+Dentro de esta función, el script verifica si el jugador está en un grupo específico
+utilizando el método IsInGroup del objeto Player.
+
+Si el jugador está en el grupo, el script obtiene el objeto Humanoid del personaje del jugador
+y aumenta su propiedad WalkSpeed en +16.]]
+}
+
+PROCESO()
+
+-- Obtener el servicio Players para detectar cuándo un jugador se une al juego
+local Players = game:GetService("Players")
+
+-- Establecer el ID del grupo que queremos verificar
+local groupId = 8000359
+
+-- Conectar una función al evento PlayerAdded para detectar cuándo un jugador se une al juego
+Players.PlayerAdded:Connect(function(player)
+	-- Conectar una función al evento CharacterAdded para detectar cuándo el personaje del jugador ha sido agregado al juego
+	player.CharacterAdded:Connect(function(character)
+		-- Verificar si el jugador está en el grupo especificado
+		if player:IsInGroup(groupId) then
+			-- Obtener el objeto Humanoid del personaje del jugador
+			local humanoid = character:WaitForChild("Humanoid")
+
+			-- Aumentar la propiedad WalkSpeed del Humanoid en +16
+			humanoid.WalkSpeed = humanoid.WalkSpeed + 16
+		end
+	end)
+end)
+--------------------------------------------------------------------------------------------------------
+NO_COLISIONAR_ENTRE_JUGADORES()
+
+Descripcion = {
+    [[Este script muestra cómo evitar que los personajes de los jugadores colisionen entre sí en Roblox.
+    Para hacer esto, utilizamos el servicio `PhysicsService` para crear un grupo de colisión y
+    establecer las reglas de colisión para que los personajes de los jugadores no colisionen entre sí.
+    En este ejemplo, creamos un grupo de colisión llamado "Jugadores" y establecemos las reglas de colisión
+    para que los personajes de los jugadores no colisionen entre sí.]],
+
+	Codigos_Que_Usaremos = "game:GetService(), PhysicsService:CreateCollisionGroup(), PhysicsService:CollisionGroupSetCollidable(), PhysicsService:SetPartCollisionGroup()",
+
+	Eventos_Que_Detectaremos = "Players.PlayerAdded, CharacterAdded",
+
+	Parametros_Requeridos = "player, character"
+}
+
+NOTA = {[[Este script utiliza el servicio PhysicsService para crear un grupo de colisión y establecer las reglas de colisión.
+Cuando un jugador se une al juego, el script agrega todas las partes del personaje del jugador al grupo de colisión
+para evitar que colisione con otros personajes de jugadores.]]
+}
+
+PROCESO()
+
+local Players = game:GetService("Players")
+local PhysicsService = game:GetService("PhysicsService")
+
+-- Crear un grupo de colisión para los personajes de los jugadores
+local playerGroup = "Jugadores"
+PhysicsService:CreateCollisionGroup(playerGroup)
+
+-- Establecer las reglas de colisión para que los personajes de los jugadores no colisionen entre sí
+PhysicsService:CollisionGroupSetCollidable(playerGroup, playerGroup, false)
+
+-- Función para agregar todas las partes del personaje del jugador al grupo de colisión
+local function setCollisionGroup(character)
+	for _, part in pairs(character:GetDescendants()) do
+		if part:IsA("BasePart") then
+			PhysicsService:SetPartCollisionGroup(part, playerGroup)
+		end
+	end
+end
+
+-- Conectar una función al evento PlayerAdded para detectar cuándo un jugador se une al juego
+Players.PlayerAdded:Connect(function(player)
+	-- Conectar una función al evento CharacterAdded para detectar cuándo el personaje del jugador ha sido agregado al juego
+	player.CharacterAdded:Connect(function(character)
+		-- Agregar todas las partes del personaje del jugador al grupo de colisión
+		setCollisionGroup(character)
+	end)
+end)
+
+--------------------------------------------------------------------------------------------------------
+CONOCISTE_AL_CREADOR()
+
+Descripcion = {
+    [[Este script muestra cómo otorgar una insignia a un jugador cuando toca al creador del juego en Roblox.
+    Para hacer esto, utilizamos el servicio `BadgeService` para otorgar la insignia al jugador y
+    el evento `Touched` del `HumanoidRootPart` del creador para detectar cuándo un jugador lo toca.
+    En este ejemplo, verificamos si el jugador que tocó al creador es un jugador válido y, si es así,
+    le otorgamos una insignia específica.]],
+
+	Codigos_Que_Usaremos = "game:GetService(), BadgeService:AwardBadge(), table.find(), BadgeService:AwardBadge()",
+
+	Eventos_Que_Detectaremos = "Players.PlayerAdded, CharacterAdded, HumanoidRootPart.Touched",
+
+	Parametros_Requeridos = "player, character, hit"
+}
+
+PROCESO()
+
+NOTA = {[[Este script utiliza el servicio Players para detectar cuándo un jugador se une al juego
+mediante el evento PlayerAdded.
+Cuando un jugador se une, el script conecta una función al evento CharacterAdded del jugador
+para detectar cuándo su personaje ha sido agregado al juego.
+Dentro de esta función, el script verifica si el jugador es uno de los creadores del juego.
+Si es así, obtiene el HumanoidRootPart del personaje del creador y conecta una función al evento Touched
+para detectar cuándo otro jugador lo toca.
+
+Cuando otro jugador toca al creador, el script verifica si el objeto que tocó al creador es un personaje de jugador válido
+utilizando el servicio Players. Si es así, utiliza el servicio BadgeService para otorgarle
+una insignia específica al jugador que tocó al creador.]]
+}
+
+--Servicios, de Player y de Emblemas ("BadgeService")
+local Players = game:GetService("Players")
+local BadgeService = game:GetService("BadgeService")
+
+--El ID de un emblema
+local badgeId = 12307220
+
+--Los nombres en cadena en una tabla de todos los creadores del juego
+local creadores = {"Matrix1635"}
+
+--Evento si un jugador se conecta
+Players.PlayerAdded:Connect(function(player)
+	
+	--Si se conecta su personaje
+	player.CharacterAdded:Connect(function(character)
+		
+		--Una condicional para saber si se conectó en el mismo servidor que está el creador
+		if table.find(creadores, player.Name) then
+			--Señalamos el HumanoidRootPart del usuario
+			local humanoidRootPart = character:WaitForChild("HumanoidRootPart")
+			--Detectamos si su HRP es tocado 
+			humanoidRootPart.Touched:Connect(function(hit)
+				--Obtenemos el jugador del creador desde una pieza de si personaje
+				local otherPlayer = Players:GetPlayerFromCharacter(hit.Parent)
+				--Si existe el creador (su "player") entonces:
+				if otherPlayer then
+					--Le damos el emblema al jugador que lo conoció
+					BadgeService:AwardBadge(otherPlayer.UserId, badgeId)
+				end
+			end)
+		end
+	end)
+end)
+
+--------------------------------------------------------------------------------------------------------
 Tags_Y_Variables_Para_Este_Escrito = {}
 
 function TEMAS()
@@ -2843,7 +3188,7 @@ function SISTEMAS_BASICOS()
 end
 function EJEMPLOS()
 end
-function Crear_Dinero_Para_Mi_Juego()
+function CREAR_DINERO_PARA_MI_JUEGO()
 end
 function PROCESO()
 end
@@ -2864,4 +3209,14 @@ end
 function CREAR_PARTICULAS_AL_SALTAR()
 end
 function CREAR_PUNTO_DE_CONTROL()
+end
+function DAR_EMBLEMA_A_UN_JUGADOR()
+end
+function COLOCAR_UN_TAG_AL_NOMBRE_EN_CHAT()
+end
+function DETECTAR_SI_UN_JUGADOR_ESTA_EN_UN_GRUPO()
+end
+function NO_COLISIONAR_ENTRE_JUGADORES()
+end
+function CONOCISTE_AL_CREADOR()
 end
